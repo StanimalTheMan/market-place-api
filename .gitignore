@@ -22,3 +22,6 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# pesky development.log idk what it is
+development.log
