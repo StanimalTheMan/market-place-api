@@ -13245,3 +13245,1001 @@ Completed 200 OK in 197ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 586
 Completed 401 Unauthorized in 197ms (ActiveRecord: 0.1ms | Allocations: 460)
   [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
   [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[36mTruncate Tables (3.1ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTruncate Tables (2.8ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[36mTruncate Tables (2.9ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTruncate Tables (3.0ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "products"[0m
+  [1m[36mTruncate Tables (3.8ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTruncate Tables (3.6ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "products"[0m
+  [1m[36mTruncate Tables (3.2ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTruncate Tables (3.0ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (2.8ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "users";
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 9.99, 0, 980190962, '2022-06-05 20:05:52.544074', '2022-06-05 20:05:52.544074');
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 9.99, 0, 298486374, '2022-06-05 20:05:52.544074', '2022-06-05 20:05:52.544074');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (980190962, 'one@one.org', '$2a$12$v/fAa/DhaGUciF2kfIr0vuj5JKi.r70Rcnqt5oQYps7ZaA/IqJQ3S', '2022-06-05 20:05:52.546042', '2022-06-05 20:05:52.546042');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (298486374, 'two@two.org', '$2a$12$SaNKK3z9guCfK4b5YmxuG.ykqrximJljAYt7Mk8V6S1Iiotw3M7Ji', '2022-06-05 20:05:52.546042', '2022-06-05 20:05:52.546042')[0m
+  [1m[36mFixtures Load (2.8ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "users";
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 9.99, 0, 980190962, '2022-06-05 20:05:52.544429', '2022-06-05 20:05:52.544429');
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 9.99, 0, 298486374, '2022-06-05 20:05:52.544429', '2022-06-05 20:05:52.544429');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (980190962, 'one@one.org', '$2a$12$LKUz6uL2YBd4oTJRtXDIMOybX6GTvKC08OX0oYm9Nc4RWAPUNDKha', '2022-06-05 20:05:52.546107', '2022-06-05 20:05:52.546107');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (298486374, 'two@two.org', '$2a$12$LIBGIakF/WsCVauZ9k3B5u96d7d3wzeG.9MCpul88w832/Q8Iy10i', '2022-06-05 20:05:52.546107', '2022-06-05 20:05:52.546107')[0m
+  [1m[36mFixtures Load (2.7ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "users";
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 9.99, 0, 980190962, '2022-06-05 20:05:52.544666', '2022-06-05 20:05:52.544666');
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 9.99, 0, 298486374, '2022-06-05 20:05:52.544666', '2022-06-05 20:05:52.544666');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (980190962, 'one@one.org', '$2a$12$G.HVre/cyQUD1xgsYd.kFuUgqVk.gcO2HTgKC0FJAGvK8thru1Q.y', '2022-06-05 20:05:52.546338', '2022-06-05 20:05:52.546338');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (298486374, 'two@two.org', '$2a$12$J8sriHNqu1deDUOweq86UuLIBhvr0nIyEQ.gMLA1tUL4zT6C1Chwa', '2022-06-05 20:05:52.546338', '2022-06-05 20:05:52.546338')[0m
+  [1m[36mFixtures Load (3.3ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "users";
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 9.99, 0, 980190962, '2022-06-05 20:05:52.543296', '2022-06-05 20:05:52.543296');
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 9.99, 0, 298486374, '2022-06-05 20:05:52.543296', '2022-06-05 20:05:52.543296');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (980190962, 'one@one.org', '$2a$12$8KISz3LRWUQkK3eJ2oEuxuX6OjRHwQsCvfpOWRoiuFJYTkFR9aEQS', '2022-06-05 20:05:52.545076', '2022-06-05 20:05:52.545076');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (298486374, 'two@two.org', '$2a$12$CQtyoD8.ar5t7YT0GZ9du.v2e2uWgWJ0UaY0jPikzod4djDqjxVgG', '2022-06-05 20:05:52.545076', '2022-06-05 20:05:52.545076')[0m
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+--------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+UserTest: test_user_with_invalid_email_should_be_invalid
+----------------------------------------------------------
+Api::V1::ProductsControllerTest: test_should_show_products
+----------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+--------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+UserTest: test_user_with_taken_email_should_be_invalid
+------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+---------------------------------------------------------
+Api::V1::ProductsControllerTest: test_should_show_product
+---------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.4ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "users";
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 9.99, 0, 980190962, '2022-06-05 20:05:52.550760', '2022-06-05 20:05:52.550760');
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 9.99, 0, 298486374, '2022-06-05 20:05:52.550760', '2022-06-05 20:05:52.550760');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (980190962, 'one@one.org', '$2a$12$TuXs6RNYw.KI0NGg873J1.OPs7NKISlVlGNDX2zKYr9Wjy52x4jSC', '2022-06-05 20:05:52.553093', '2022-06-05 20:05:52.553093');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (298486374, 'two@two.org', '$2a$12$Cu/pG0k/WjUXT5pKDyBXneH41K/EBefQoL0IurgNceYHMdmP3DDty', '2022-06-05 20:05:52.553093', '2022-06-05 20:05:52.553093')[0m
+  [1m[36mFixtures Load (0.4ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "users";
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 9.99, 0, 980190962, '2022-06-05 20:05:52.548382', '2022-06-05 20:05:52.548382');
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 9.99, 0, 298486374, '2022-06-05 20:05:52.548382', '2022-06-05 20:05:52.548382');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (980190962, 'one@one.org', '$2a$12$aNM360.rUpZd0KHb31AnxOtlgyc4zifdWErGdgvtAYZLRpv7RJT32', '2022-06-05 20:05:52.550696', '2022-06-05 20:05:52.550696');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (298486374, 'two@two.org', '$2a$12$jf55ZhNZvtoKxHVRI3H88u1Gv701t8nhXBS3GMGtqBEpHfYAEK6ly', '2022-06-05 20:05:52.550696', '2022-06-05 20:05:52.550696')[0m
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+Api::V1::ProductsControllerTest: test_should_update_product
+-----------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+UserTest: test_destroy_user_should_destroy_linked_product
+---------------------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test"], ["LIMIT", 1]]
+  [1m[36mFixtures Load (1.6ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "users";
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 9.99, 0, 980190962, '2022-06-05 20:05:52.552524', '2022-06-05 20:05:52.552524');
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 9.99, 0, 298486374, '2022-06-05 20:05:52.552524', '2022-06-05 20:05:52.552524');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (980190962, 'one@one.org', '$2a$12$nK7bQA1KcG/MbzMGn9kWhu/pRDlem3OECuRI0mPTdEy3pYHL.BGve', '2022-06-05 20:05:52.554909', '2022-06-05 20:05:52.554909');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (298486374, 'two@two.org', '$2a$12$/dmgKlXdukWcXlZTiL32lOVxpw3wCt3afwAhGLdGNKjmtrJinL0f2', '2022-06-05 20:05:52.554909', '2022-06-05 20:05:52.554909')[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+UserTest: test_user_with_a_valid_email_should_be_valid
+------------------------------------------------------
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "one@one.org"], ["LIMIT", 1]]
+  [1m[36mFixtures Load (0.4ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "users";
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 9.99, 0, 980190962, '2022-06-05 20:05:52.557566', '2022-06-05 20:05:52.557566');
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 9.99, 0, 298486374, '2022-06-05 20:05:52.557566', '2022-06-05 20:05:52.557566');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (980190962, 'one@one.org', '$2a$12$eBqqkaJPgqUDCQ8h4Tsd4OYYOnUsT1qiqcxpOzSocxj0pMWZIqs0.', '2022-06-05 20:05:52.560190', '2022-06-05 20:05:52.560190');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (298486374, 'two@two.org', '$2a$12$xQC6uE2R9fVcLtizWUQiKOw00/D0dcAaIcxJSHo8jdTvIG6OC9ebi', '2022-06-05 20:05:52.560190', '2022-06-05 20:05:52.560190')[0m
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------
+Api::V1::ProductsControllerTest: test_should_destroy_product
+------------------------------------------------------------
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@test.org"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+Api::V1::ProductsControllerTest: test_should_forbid_update_product
+------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."user_id" = ?[0m  [["user_id", 980190962]]
+  [1m[36mProduct Destroy (2.0ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 980190962]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+Api::V1::ProductsControllerTest: test_should_create_product
+-----------------------------------------------------------
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+Started DELETE "/api/v1/products/980190962" for 127.0.0.1 at 2022-06-05 16:05:52 -0400
+Started PATCH "/api/v1/products/980190962" for 127.0.0.1 at 2022-06-05 16:05:52 -0400
+Started GET "/api/v1/products" for 127.0.0.1 at 2022-06-05 16:05:52 -0400
+Started GET "/api/v1/products/980190962" for 127.0.0.1 at 2022-06-05 16:05:52 -0400
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 298486374], ["LIMIT", 1]]
+Started PATCH "/api/v1/products/980190962" for 127.0.0.1 at 2022-06-05 16:05:52 -0400
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+Started POST "/api/v1/products" for 127.0.0.1 at 2022-06-05 16:05:52 -0400
+Processing by Api::V1::ProductsController#update as JSON
+Processing by Api::V1::ProductsController#update as JSON
+  Parameters: {"product"=>{"title"=>"MyString"}, "id"=>"980190962"}
+  Parameters: {"product"=>{"title"=>"MyString"}, "id"=>"980190962"}
+Processing by Api::V1::ProductsController#destroy as JSON
+  Parameters: {"id"=>"980190962", "product"=>{}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by Api::V1::ProductsController#show as JSON
+  Parameters: {"id"=>"980190962", "product"=>{}}
+Processing by Api::V1::ProductsController#index as JSON
+  Parameters: {"product"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 298486374], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Filter chain halted as :check_owner rendered or redirected
+Completed 403 Forbidden in 2ms (ActiveRecord: 0.1ms | Allocations: 726)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.1ms | Allocations: 606)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 667)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+Api::V1::ProductsControllerTest: test_should_forbid_create_product
+------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Destroy (0.7ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 980190962]]
+-------------------------------------------------------------------
+Api::V1::ProductsControllerTest: test_should_forbid_destroy_product
+-------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Completed 204 No Content in 8ms (ActiveRecord: 0.9ms | Allocations: 3236)
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+ProductTest: test_should_have_a_positive_price
+----------------------------------------------
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by Api::V1::ProductsController#create as JSON
+  Parameters: {"product"=>{"title"=>"MyString", "price"=>"9.99", "published"=>false}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+Started POST "/api/v1/products" for 127.0.0.1 at 2022-06-05 16:05:52 -0400
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 298486374], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------
+AuthenticableTest: test_should_not_get_user_from_empty_Authorization_token
+--------------------------------------------------------------------------
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Started DELETE "/api/v1/users/980190962" for 127.0.0.1 at 2022-06-05 16:05:52 -0400
+Completed 200 OK in 19ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 5229)
+Processing by Api::V1::ProductsController#create as JSON
+  Parameters: {"product"=>{"title"=>"MyString", "price"=>"9.99", "published"=>false}}
+Filter chain halted as :check_login rendered or redirected
+Completed 403 Forbidden in 0ms (ActiveRecord: 0.0ms | Allocations: 81)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "published", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["price", 9.99], ["published", 0], ["user_id", 980190962], ["created_at", "2022-06-05 20:05:52.748398"], ["updated_at", "2022-06-05 20:05:52.748398"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 14ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 1601)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+Processing by Api::V1::UsersController#destroy as JSON
+  Parameters: {"id"=>"980190962", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 298486374], ["LIMIT", 1]]
+Filter chain halted as :check_owner rendered or redirected
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Completed 403 Forbidden in 3ms (ActiveRecord: 0.2ms | Allocations: 568)
+----------------------------------------------------------------
+AuthenticableTest: test_should_get_user_from_Authorization_token
+----------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------
+Api::V1::TokensControllerTest: test_should_not_get_JWT_token
+------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Api::V1::UsersControllerTest: test_should_forbid_destroy_user
+--------------------------------------------------------
+-------------------------------------------------------------
+Api::V1::TokensControllerTest: test_should_get_JWT_token
+--------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------
+Api::V1::UsersControllerTest: test_should_show_user
+---------------------------------------------------
+Started DELETE "/api/v1/users/980190962" for 127.0.0.1 at 2022-06-05 16:05:52 -0400
+Started POST "/api/v1/tokens" for 127.0.0.1 at 2022-06-05 16:05:52 -0400
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+Api::V1::UsersControllerTest: test_should_destroy_user
+------------------------------------------------------
+Started POST "/api/v1/tokens" for 127.0.0.1 at 2022-06-05 16:05:52 -0400
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+Started GET "/api/v1/users/980190962" for 127.0.0.1 at 2022-06-05 16:05:52 -0400
+Started DELETE "/api/v1/users/980190962" for 127.0.0.1 at 2022-06-05 16:05:52 -0400
+Processing by Api::V1::TokensController#create as JSON
+  Parameters: {"user"=>{"email"=>"one@one.org", "password"=>"[FILTERED]"}, "token"=>{"user"=>{"email"=>"one@one.org", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "one@one.org"], ["LIMIT", 1]]
+Processing by Api::V1::TokensController#create as JSON
+  Parameters: {"user"=>{"email"=>"one@one.org", "password"=>"[FILTERED]"}, "token"=>{"user"=>{"email"=>"one@one.org", "password"=>"[FILTERED]"}}}
+Processing by Api::V1::UsersController#destroy as JSON
+  Parameters: {"id"=>"980190962", "user"=>{}}
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"980190962", "user"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "one@one.org"], ["LIMIT", 1]]
+Processing by Api::V1::UsersController#destroy as JSON
+  Parameters: {"id"=>"980190962", "user"=>{}}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Filter chain halted as :check_owner rendered or redirected
+Completed 403 Forbidden in 1ms (ActiveRecord: 0.1ms | Allocations: 238)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 479)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------
+Api::V1::UsersControllerTest: test_should_forbid_update_user
+------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."user_id" = ?[0m  [["user_id", 980190962]]
+Api::V1::UsersControllerTest: test_should_create_user
+-----------------------------------------------------
+Started PATCH "/api/v1/users/980190962" for 127.0.0.1 at 2022-06-05 16:05:52 -0400
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 5ms (ActiveRecord: 0.7ms | Allocations: 1963)
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+Started POST "/api/v1/users" for 127.0.0.1 at 2022-06-05 16:05:52 -0400
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------
+Api::V1::UsersControllerTest: test_should_not_create_user_with_taken_email
+--------------------------------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+Started POST "/api/v1/users" for 127.0.0.1 at 2022-06-05 16:05:52 -0400
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"email"=>"one@one.org"}, "id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Filter chain halted as :check_owner rendered or redirected
+Completed 403 Forbidden in 1ms (ActiveRecord: 0.1ms | Allocations: 196)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------
+Api::V1::UsersControllerTest: test_should_update_user
+-----------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"test@test.org", "password"=>"[FILTERED]"}}
+Started PATCH "/api/v1/users/980190962" for 127.0.0.1 at 2022-06-05 16:05:52 -0400
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"one@one.org", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@test.org"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "one@one.org"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "test@test.org"], ["password_digest", "$2a$04$TQaHs/VLIi4Cdsctmiv1POzsAbExPsQXNM8ghfYnmALV5aJk4Mir6"], ["created_at", "2022-06-05 20:05:52.800585"], ["updated_at", "2022-06-05 20:05:52.800585"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 8ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 1228)
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"email"=>"one@one.org"}, "id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "one@one.org"], ["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1420)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 184ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 346653)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Completed 200 OK in 218ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 615)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 401 Unauthorized in 222ms (ActiveRecord: 0.1ms | Allocations: 460)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTruncate Tables (1.9ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[36mTruncate Tables (1.9ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "products"[0m
+  [1m[36mTruncate Tables (2.0ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTruncate Tables (2.0ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "products"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTruncate Tables (2.4ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "products"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[36mTruncate Tables (2.0ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[36mTruncate Tables (2.0ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTruncate Tables (2.1ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "products"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.4ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "users";
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 9.99, 0, 980190962, '2022-06-05 20:07:59.314677', '2022-06-05 20:07:59.314677');
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 9.99, 0, 298486374, '2022-06-05 20:07:59.314677', '2022-06-05 20:07:59.314677');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (980190962, 'one@one.org', '$2a$12$BaAKCjD9kDUfTx1u.StbGeURduE303de344EVaWNTwTmlTqM7Jox.', '2022-06-05 20:07:59.316481', '2022-06-05 20:07:59.316481');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (298486374, 'two@two.org', '$2a$12$rshfDXgtVjU2aTcR8w.gKO2OjAKJeo6Y8o49hW.NRxuxca.UPz81G', '2022-06-05 20:07:59.316481', '2022-06-05 20:07:59.316481')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+UserTest: test_user_with_a_valid_email_should_be_valid
+------------------------------------------------------
+  [1m[36mFixtures Load (0.4ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "users";
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 9.99, 0, 980190962, '2022-06-05 20:07:59.316083', '2022-06-05 20:07:59.316083');
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 9.99, 0, 298486374, '2022-06-05 20:07:59.316083', '2022-06-05 20:07:59.316083');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (980190962, 'one@one.org', '$2a$12$FDQ2Uj1KUh4QP555wIEXauVq48IGFE0wmF5OufQI3/NsQZA8Q3yL6', '2022-06-05 20:07:59.318268', '2022-06-05 20:07:59.318268');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (298486374, 'two@two.org', '$2a$12$ZrhK2Q5Dh4uOZYMut3IQkeTfZXUB6C539r1wbbq4Moirh2mGE54Tu', '2022-06-05 20:07:59.318268', '2022-06-05 20:07:59.318268')[0m
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------
+AuthenticableTest: test_should_get_user_from_Authorization_token
+----------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mFixtures Load (0.4ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "users";
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 9.99, 0, 980190962, '2022-06-05 20:07:59.319432', '2022-06-05 20:07:59.319432');
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 9.99, 0, 298486374, '2022-06-05 20:07:59.319432', '2022-06-05 20:07:59.319432');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (980190962, 'one@one.org', '$2a$12$nbg7fa6AgJEiSfQfkxrG4O6JgvXx4vwyqytWsdk/jbyb92j4I56la', '2022-06-05 20:07:59.321247', '2022-06-05 20:07:59.321247');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (298486374, 'two@two.org', '$2a$12$Op0NTVGRYJVPnEIWqBdV8.tx3Baqq7DBYQnMyOdkgiblXt.eAW8MW', '2022-06-05 20:07:59.321247', '2022-06-05 20:07:59.321247')[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mFixtures Load (0.4ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "users";
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 9.99, 0, 980190962, '2022-06-05 20:07:59.319498', '2022-06-05 20:07:59.319498');
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 9.99, 0, 298486374, '2022-06-05 20:07:59.319498', '2022-06-05 20:07:59.319498');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (980190962, 'one@one.org', '$2a$12$AUz3a9wgKhkLejKiXRQPlORT0wlSaa610pIe4v9xzFMVh2bFtHljm', '2022-06-05 20:07:59.321518', '2022-06-05 20:07:59.321518');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (298486374, 'two@two.org', '$2a$12$BuV/aUWMSI9AOTVQ.i0T8OCJvb3DNHTOufUrKtvoIyDy2wmCON6I2', '2022-06-05 20:07:59.321518', '2022-06-05 20:07:59.321518')[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mFixtures Load (0.3ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "users";
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 9.99, 0, 980190962, '2022-06-05 20:07:59.320785', '2022-06-05 20:07:59.320785');
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 9.99, 0, 298486374, '2022-06-05 20:07:59.320785', '2022-06-05 20:07:59.320785');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (980190962, 'one@one.org', '$2a$12$gCKahxujY4f9oGSMlF96K.ZZDoM6yTcdJ.VH0478YSCJ4e2/dsZ.e', '2022-06-05 20:07:59.322448', '2022-06-05 20:07:59.322448');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (298486374, 'two@two.org', '$2a$12$fPMZy.GYQig6vjAU4IKgjeJG9EORY/184ORiL3mTtlm5HJXSIv//e', '2022-06-05 20:07:59.322448', '2022-06-05 20:07:59.322448')[0m
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------
+Api::V1::TokensControllerTest: test_should_get_JWT_token
+--------------------------------------------------------
+---------------------------------------------------------
+UserTest: test_destroy_user_should_destroy_linked_product
+---------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@test.org"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------
+AuthenticableTest: test_should_not_get_user_from_empty_Authorization_token
+--------------------------------------------------------------------------
+  [1m[36mFixtures Load (0.3ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "users";
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 9.99, 0, 980190962, '2022-06-05 20:07:59.323432', '2022-06-05 20:07:59.323432');
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 9.99, 0, 298486374, '2022-06-05 20:07:59.323432', '2022-06-05 20:07:59.323432');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (980190962, 'one@one.org', '$2a$12$fwTyxjUjr5dybtmqMQyUi.1nxVyfIzHmaAPZyFqX7N1M1Lrpu3Oo2', '2022-06-05 20:07:59.325231', '2022-06-05 20:07:59.325231');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (298486374, 'two@two.org', '$2a$12$NfX4YWoMgojggTeIl31aMuxfnNeZI6DaxBABN7DavYEWk8knhBsXi', '2022-06-05 20:07:59.325231', '2022-06-05 20:07:59.325231')[0m
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------
+UserTest: test_user_with_invalid_email_should_be_invalid
+--------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+ProductTest: test_should_have_a_positive_price
+----------------------------------------------
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."user_id" = ?[0m  [["user_id", 980190962]]
+  [1m[36mFixtures Load (0.8ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "users";
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 9.99, 0, 980190962, '2022-06-05 20:07:59.331800', '2022-06-05 20:07:59.331800');
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 9.99, 0, 298486374, '2022-06-05 20:07:59.331800', '2022-06-05 20:07:59.331800');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (980190962, 'one@one.org', '$2a$12$Ie93qmo0kGmiB4CNSy62iel5dEqy65euc7m74qe8CS7SnChXDxm6a', '2022-06-05 20:07:59.335587', '2022-06-05 20:07:59.335587');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (298486374, 'two@two.org', '$2a$12$/D7iNdxotxPl.3IiOaQxweuzPqAS.vWzNiOS/KVk/IxoxohK4cD2S', '2022-06-05 20:07:59.335587', '2022-06-05 20:07:59.335587')[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.4ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "users";
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 9.99, 0, 980190962, '2022-06-05 20:07:59.335961', '2022-06-05 20:07:59.335961');
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 9.99, 0, 298486374, '2022-06-05 20:07:59.335961', '2022-06-05 20:07:59.335961');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (980190962, 'one@one.org', '$2a$12$GPm7wdRv.cXM6Xwrv83W8e.bYJbUuteXYWAOmLn28Uitb150w7I4a', '2022-06-05 20:07:59.338504', '2022-06-05 20:07:59.338504');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (298486374, 'two@two.org', '$2a$12$VWfCCN7xXYbesPuRCQNaVe4VI7EQ/cNEd626KDXM4lzUSOireXsh.', '2022-06-05 20:07:59.338504', '2022-06-05 20:07:59.338504')[0m
+------------------------------------------------------
+UserTest: test_user_with_taken_email_should_be_invalid
+------------------------------------------------------
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (1.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------
+Api::V1::TokensControllerTest: test_should_not_get_JWT_token
+------------------------------------------------------------
+  [1m[36mProduct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 980190962]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "one@one.org"], ["LIMIT", 1]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+Api::V1::UsersControllerTest: test_should_destroy_user
+------------------------------------------------------
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------
+Api::V1::UsersControllerTest: test_should_not_create_user_with_taken_email
+--------------------------------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------
+Api::V1::UsersControllerTest: test_should_show_user
+---------------------------------------------------
+Started POST "/api/v1/tokens" for 127.0.0.1 at 2022-06-05 16:07:59 -0400
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started POST "/api/v1/users" for 127.0.0.1 at 2022-06-05 16:07:59 -0400
+Started GET "/api/v1/users/980190962" for 127.0.0.1 at 2022-06-05 16:07:59 -0400
+Started POST "/api/v1/tokens" for 127.0.0.1 at 2022-06-05 16:07:59 -0400
+Processing by Api::V1::TokensController#create as JSON
+  Parameters: {"user"=>{"email"=>"one@one.org", "password"=>"[FILTERED]"}, "token"=>{"user"=>{"email"=>"one@one.org", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "one@one.org"], ["LIMIT", 1]]
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"one@one.org", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"980190962", "user"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "one@one.org"], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 591)
+Processing by Api::V1::TokensController#create as JSON
+  Parameters: {"user"=>{"email"=>"one@one.org", "password"=>"[FILTERED]"}, "token"=>{"user"=>{"email"=>"one@one.org", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "one@one.org"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Started DELETE "/api/v1/users/980190962" for 127.0.0.1 at 2022-06-05 16:07:59 -0400
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------
+Api::V1::UsersControllerTest: test_should_create_user
+-----------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+Started POST "/api/v1/users" for 127.0.0.1 at 2022-06-05 16:07:59 -0400
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"test@test.org", "password"=>"[FILTERED]"}}
+Processing by Api::V1::UsersController#destroy as JSON
+  Parameters: {"id"=>"980190962", "user"=>{}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@test.org"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."user_id" = ?[0m  [["user_id", 980190962]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "test@test.org"], ["password_digest", "$2a$04$ZT5SQDIUuvoFGcQApdtPQ.4rlkYWUUkL2okx4CkkeQD67nPILpHdO"], ["created_at", "2022-06-05 20:07:59.508340"], ["updated_at", "2022-06-05 20:07:59.508340"]]
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 5ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 1229)
+Completed 204 No Content in 3ms (ActiveRecord: 0.6ms | Allocations: 1099)
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------
+Api::V1::UsersControllerTest: test_should_update_user
+-----------------------------------------------------
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------
+Api::V1::UsersControllerTest: test_should_forbid_destroy_user
+-------------------------------------------------------------
+Started PATCH "/api/v1/users/980190962" for 127.0.0.1 at 2022-06-05 16:07:59 -0400
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+Started DELETE "/api/v1/users/980190962" for 127.0.0.1 at 2022-06-05 16:07:59 -0400
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"email"=>"one@one.org"}, "id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "one@one.org"], ["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1109)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Processing by Api::V1::UsersController#destroy as JSON
+  Parameters: {"id"=>"980190962", "user"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Filter chain halted as :check_owner rendered or redirected
+Completed 403 Forbidden in 1ms (ActiveRecord: 0.1ms | Allocations: 201)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------
+Api::V1::UsersControllerTest: test_should_forbid_update_user
+------------------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+Api::V1::ProductsControllerTest: test_should_show_product
+---------------------------------------------------------
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started PATCH "/api/v1/users/980190962" for 127.0.0.1 at 2022-06-05 16:07:59 -0400
+Started GET "/api/v1/products/980190962" for 127.0.0.1 at 2022-06-05 16:07:59 -0400
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"email"=>"one@one.org"}, "id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Filter chain halted as :check_owner rendered or redirected
+Completed 403 Forbidden in 1ms (ActiveRecord: 0.1ms | Allocations: 204)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Processing by Api::V1::ProductsController#show as JSON
+  Parameters: {"id"=>"980190962", "product"=>{}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+Api::V1::ProductsControllerTest: test_should_create_product
+-----------------------------------------------------------
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.1ms | Allocations: 557)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+Api::V1::ProductsControllerTest: test_should_forbid_update_product
+------------------------------------------------------------------
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 298486374], ["LIMIT", 1]]
+Started PATCH "/api/v1/products/980190962" for 127.0.0.1 at 2022-06-05 16:07:59 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+Started POST "/api/v1/products" for 127.0.0.1 at 2022-06-05 16:07:59 -0400
+Processing by Api::V1::ProductsController#update as JSON
+  Parameters: {"product"=>{"title"=>"MyString"}, "id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 298486374], ["LIMIT", 1]]
+Filter chain halted as :check_owner rendered or redirected
+Completed 403 Forbidden in 1ms (ActiveRecord: 0.1ms | Allocations: 398)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------
+Api::V1::ProductsControllerTest: test_should_forbid_destroy_product
+-------------------------------------------------------------------
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+Processing by Api::V1::ProductsController#create as JSON
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 298486374], ["LIMIT", 1]]
+  Parameters: {"product"=>{"title"=>"MyString", "price"=>"9.99", "published"=>false}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started DELETE "/api/v1/users/980190962" for 127.0.0.1 at 2022-06-05 16:07:59 -0400
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "published", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "MyString"], ["price", 9.99], ["published", 0], ["user_id", 980190962], ["created_at", "2022-06-05 20:07:59.592621"], ["updated_at", "2022-06-05 20:07:59.592621"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 13ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 3294)
+Processing by Api::V1::UsersController#destroy as JSON
+  Parameters: {"id"=>"980190962", "user"=>{}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 298486374], ["LIMIT", 1]]
+Filter chain halted as :check_owner rendered or redirected
+Completed 403 Forbidden in 1ms (ActiveRecord: 0.1ms | Allocations: 397)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+Api::V1::ProductsControllerTest: test_should_show_products
+----------------------------------------------------------
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+Api::V1::ProductsControllerTest: test_should_forbid_create_product
+------------------------------------------------------------------
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+Started GET "/api/v1/products" for 127.0.0.1 at 2022-06-05 16:07:59 -0400
+Started POST "/api/v1/products" for 127.0.0.1 at 2022-06-05 16:07:59 -0400
+Processing by Api::V1::ProductsController#index as JSON
+  Parameters: {"product"=>{}}
+Processing by Api::V1::ProductsController#create as JSON
+  Parameters: {"product"=>{"title"=>"MyString", "price"=>"9.99", "published"=>false}}
+Filter chain halted as :check_login rendered or redirected
+Completed 403 Forbidden in 0ms (ActiveRecord: 0.0ms | Allocations: 81)
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.1ms | Allocations: 512)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------
+Api::V1::ProductsControllerTest: test_should_destroy_product
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+Api::V1::ProductsControllerTest: test_should_update_product
+-----------------------------------------------------------
+------------------------------------------------------------
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+Started PATCH "/api/v1/products/980190962" for 127.0.0.1 at 2022-06-05 16:07:59 -0400
+Started DELETE "/api/v1/products/980190962" for 127.0.0.1 at 2022-06-05 16:07:59 -0400
+Processing by Api::V1::ProductsController#destroy as JSON
+  Parameters: {"id"=>"980190962", "product"=>{}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by Api::V1::ProductsController#update as JSON
+  Parameters: {"product"=>{"title"=>"MyString"}, "id"=>"980190962"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 2ms (ActiveRecord: 0.6ms | Allocations: 569)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 1256)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 220ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 346824)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Completed 200 OK in 261ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 961)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Completed 401 Unauthorized in 263ms (ActiveRecord: 0.1ms | Allocations: 507)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
