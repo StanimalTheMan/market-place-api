@@ -20681,3 +20681,1196 @@ Completed 200 OK in 231ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 614
   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
 Completed 401 Unauthorized in 240ms (ActiveRecord: 0.1ms | Allocations: 460)
   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "orders"[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "total" decimal, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX "index_orders_on_user_id" ON "orders" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "products"[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "price" decimal, "published" boolean, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX "index_products_on_user_id" ON "products" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar NOT NULL, "password_digest" varchar NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aorders" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "total" decimal DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_aorders_on_user_id" ON "aorders" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "aorders" ("id","user_id","total","created_at","updated_at")
+                     SELECT "id","user_id","total","created_at","updated_at" FROM "orders"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "orders"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "total" decimal DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_f868b47f6a"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_orders_on_user_id" ON "orders" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "orders" ("id","user_id","total","created_at","updated_at")
+                     SELECT "id","user_id","total","created_at","updated_at" FROM "aorders"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aorders"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aproducts" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "price" decimal DEFAULT NULL, "published" boolean DEFAULT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_aproducts_on_user_id" ON "aproducts" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "aproducts" ("id","title","price","published","user_id","created_at","updated_at")
+                     SELECT "id","title","price","published","user_id","created_at","updated_at" FROM "products"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "price" decimal DEFAULT NULL, "published" boolean DEFAULT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_dee2631783"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_products_on_user_id" ON "products" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "products" ("id","title","price","published","user_id","created_at","updated_at")
+                     SELECT "id","title","price","published","user_id","created_at","updated_at" FROM "aproducts"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aproducts"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20220609035803)[0m
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20220519134929),
+(20220530160539);
+
+[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2022-06-09 04:04:25.353946"], ["updated_at", "2022-06-09 04:04:25.353946"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "4e0e52f1fd893586135b2ab179b4dfe4c833a96a"], ["created_at", "2022-06-09 04:04:25.356363"], ["updated_at", "2022-06-09 04:04:25.356363"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "orders"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "orders"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "orders"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "orders"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "total" decimal, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "total" decimal, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "orders"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "orders"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "orders"[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "total" decimal, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "total" decimal, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX "index_orders_on_user_id" ON "orders" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "orders"[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX "index_orders_on_user_id" ON "orders" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "products"[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "total" decimal, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "products"[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "total" decimal, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX "index_orders_on_user_id" ON "orders" ("user_id")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "total" decimal, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "total" decimal, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE  INDEX "index_orders_on_user_id" ON "orders" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "products"[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "price" decimal, "published" boolean, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "price" decimal, "published" boolean, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX "index_orders_on_user_id" ON "orders" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "products"[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "price" decimal, "published" boolean, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX "index_orders_on_user_id" ON "orders" ("user_id")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX "index_orders_on_user_id" ON "orders" ("user_id")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX "index_products_on_user_id" ON "products" ("user_id")[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX "index_orders_on_user_id" ON "orders" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "products"[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX "index_products_on_user_id" ON "products" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "products"[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "price" decimal, "published" boolean, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "products"[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "price" decimal, "published" boolean, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX "index_products_on_user_id" ON "products" ("user_id")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "price" decimal, "published" boolean, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "price" decimal, "published" boolean, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "price" decimal, "published" boolean, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar NOT NULL, "password_digest" varchar NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar NOT NULL, "password_digest" varchar NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX "index_products_on_user_id" ON "products" ("user_id")[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX "index_products_on_user_id" ON "products" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar NOT NULL, "password_digest" varchar NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX "index_products_on_user_id" ON "products" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX "index_products_on_user_id" ON "products" ("user_id")[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX "index_products_on_user_id" ON "products" ("user_id")[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar NOT NULL, "password_digest" varchar NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar NOT NULL, "password_digest" varchar NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar NOT NULL, "password_digest" varchar NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar NOT NULL, "password_digest" varchar NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar NOT NULL, "password_digest" varchar NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aorders" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "total" decimal DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aorders" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "total" decimal DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aorders" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "total" decimal DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aorders" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "total" decimal DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_aorders_on_user_id" ON "aorders" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_aorders_on_user_id" ON "aorders" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_aorders_on_user_id" ON "aorders" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "aorders" ("id","user_id","total","created_at","updated_at")
+                     SELECT "id","user_id","total","created_at","updated_at" FROM "orders"[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aorders" ("id","user_id","total","created_at","updated_at")
+                     SELECT "id","user_id","total","created_at","updated_at" FROM "orders"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aorders" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "total" decimal DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aorders" ("id","user_id","total","created_at","updated_at")
+                     SELECT "id","user_id","total","created_at","updated_at" FROM "orders"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aorders" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "total" decimal DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_aorders_on_user_id" ON "aorders" ("user_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "orders"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "orders"[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aorders" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "total" decimal DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "orders"[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "aorders" ("id","user_id","total","created_at","updated_at")
+                     SELECT "id","user_id","total","created_at","updated_at" FROM "orders"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "orders"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_aorders_on_user_id" ON "aorders" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_aorders_on_user_id" ON "aorders" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "aorders" ("id","user_id","total","created_at","updated_at")
+                     SELECT "id","user_id","total","created_at","updated_at" FROM "orders"[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "orders"[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "total" decimal DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_f868b47f6a"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aorders" ("id","user_id","total","created_at","updated_at")
+                     SELECT "id","user_id","total","created_at","updated_at" FROM "orders"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_aorders_on_user_id" ON "aorders" ("user_id")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE "orders"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aorders" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "total" decimal DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "aorders" ("id","user_id","total","created_at","updated_at")
+                     SELECT "id","user_id","total","created_at","updated_at" FROM "orders"[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "total" decimal DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_f868b47f6a"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_orders_on_user_id" ON "orders" ("user_id")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "total" decimal DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_f868b47f6a"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE "orders"[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("id","user_id","total","created_at","updated_at")
+                     SELECT "id","user_id","total","created_at","updated_at" FROM "aorders"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aorders"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "total" decimal DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_f868b47f6a"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "total" decimal DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_f868b47f6a"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "total" decimal DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_f868b47f6a"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_orders_on_user_id" ON "orders" ("user_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("id","user_id","total","created_at","updated_at")
+                     SELECT "id","user_id","total","created_at","updated_at" FROM "aorders"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_orders_on_user_id" ON "orders" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_orders_on_user_id" ON "orders" ("user_id")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "total" decimal DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_f868b47f6a"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aorders"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_orders_on_user_id" ON "orders" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_aorders_on_user_id" ON "aorders" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "aorders" ("id","user_id","total","created_at","updated_at")
+                     SELECT "id","user_id","total","created_at","updated_at" FROM "orders"[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "orders" ("id","user_id","total","created_at","updated_at")
+                     SELECT "id","user_id","total","created_at","updated_at" FROM "aorders"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_orders_on_user_id" ON "orders" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_orders_on_user_id" ON "orders" ("user_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "orders"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aorders"[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("id","user_id","total","created_at","updated_at")
+                     SELECT "id","user_id","total","created_at","updated_at" FROM "aorders"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aproducts" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "price" decimal DEFAULT NULL, "published" boolean DEFAULT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("id","user_id","total","created_at","updated_at")
+                     SELECT "id","user_id","total","created_at","updated_at" FROM "aorders"[0m
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "aorders"[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("id","user_id","total","created_at","updated_at")
+                     SELECT "id","user_id","total","created_at","updated_at" FROM "aorders"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aorders"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("id","user_id","total","created_at","updated_at")
+                     SELECT "id","user_id","total","created_at","updated_at" FROM "aorders"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_aproducts_on_user_id" ON "aproducts" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aorders"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aorders"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "aproducts" ("id","title","price","published","user_id","created_at","updated_at")
+                     SELECT "id","title","price","published","user_id","created_at","updated_at" FROM "products"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "products"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "total" decimal DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_f868b47f6a"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aproducts" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "price" decimal DEFAULT NULL, "published" boolean DEFAULT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aproducts" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "price" decimal DEFAULT NULL, "published" boolean DEFAULT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aproducts" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "price" decimal DEFAULT NULL, "published" boolean DEFAULT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_orders_on_user_id" ON "orders" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aproducts" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "price" decimal DEFAULT NULL, "published" boolean DEFAULT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_aproducts_on_user_id" ON "aproducts" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_aproducts_on_user_id" ON "aproducts" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("id","user_id","total","created_at","updated_at")
+                     SELECT "id","user_id","total","created_at","updated_at" FROM "aorders"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_aproducts_on_user_id" ON "aproducts" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aproducts" ("id","title","price","published","user_id","created_at","updated_at")
+                     SELECT "id","title","price","published","user_id","created_at","updated_at" FROM "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aorders"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aproducts" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "price" decimal DEFAULT NULL, "published" boolean DEFAULT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_aproducts_on_user_id" ON "aproducts" ("user_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aproducts" ("id","title","price","published","user_id","created_at","updated_at")
+                     SELECT "id","title","price","published","user_id","created_at","updated_at" FROM "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aproducts" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "price" decimal DEFAULT NULL, "published" boolean DEFAULT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "price" decimal DEFAULT NULL, "published" boolean DEFAULT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_dee2631783"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "aproducts" ("id","title","price","published","user_id","created_at","updated_at")
+                     SELECT "id","title","price","published","user_id","created_at","updated_at" FROM "products"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "products"[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "aproducts" ("id","title","price","published","user_id","created_at","updated_at")
+                     SELECT "id","title","price","published","user_id","created_at","updated_at" FROM "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_aproducts_on_user_id" ON "aproducts" ("user_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "products"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "price" decimal DEFAULT NULL, "published" boolean DEFAULT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_dee2631783"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "aproducts" ("id","title","price","published","user_id","created_at","updated_at")
+                     SELECT "id","title","price","published","user_id","created_at","updated_at" FROM "products"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "tindex_aproducts_on_user_id" ON "aproducts" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_products_on_user_id" ON "products" ("user_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "products"[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "aproducts" ("id","title","price","published","user_id","created_at","updated_at")
+                     SELECT "id","title","price","published","user_id","created_at","updated_at" FROM "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "price" decimal DEFAULT NULL, "published" boolean DEFAULT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_dee2631783"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "products" ("id","title","price","published","user_id","created_at","updated_at")
+                     SELECT "id","title","price","published","user_id","created_at","updated_at" FROM "aproducts"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aproducts"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_products_on_user_id" ON "products" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "price" decimal DEFAULT NULL, "published" boolean DEFAULT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_dee2631783"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "price" decimal DEFAULT NULL, "published" boolean DEFAULT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_dee2631783"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "price" decimal DEFAULT NULL, "published" boolean DEFAULT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_dee2631783"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_products_on_user_id" ON "products" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "products" ("id","title","price","published","user_id","created_at","updated_at")
+                     SELECT "id","title","price","published","user_id","created_at","updated_at" FROM "aproducts"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aproducts"[0m
+  [1m[35m (1.6ms)[0m  [1m[32mINSERT INTO "products" ("id","title","price","published","user_id","created_at","updated_at")
+                     SELECT "id","title","price","published","user_id","created_at","updated_at" FROM "aproducts"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_products_on_user_id" ON "products" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aproducts"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_products_on_user_id" ON "products" ("user_id")[0m
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_products_on_user_id" ON "products" ("user_id")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "products" ("id","title","price","published","user_id","created_at","updated_at")
+                     SELECT "id","title","price","published","user_id","created_at","updated_at" FROM "aproducts"[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "products" ("id","title","price","published","user_id","created_at","updated_at")
+                     SELECT "id","title","price","published","user_id","created_at","updated_at" FROM "aproducts"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "price" decimal DEFAULT NULL, "published" boolean DEFAULT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_dee2631783"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aproducts" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "price" decimal DEFAULT NULL, "published" boolean DEFAULT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "aproducts"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aproducts"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "products" ("id","title","price","published","user_id","created_at","updated_at")
+                     SELECT "id","title","price","published","user_id","created_at","updated_at" FROM "aproducts"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aproducts"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_products_on_user_id" ON "products" ("user_id")[0m
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "tindex_aproducts_on_user_id" ON "aproducts" ("user_id")[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20220609035803)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "products" ("id","title","price","published","user_id","created_at","updated_at")
+                     SELECT "id","title","price","published","user_id","created_at","updated_at" FROM "aproducts"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "aproducts"[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aproducts" ("id","title","price","published","user_id","created_at","updated_at")
+                     SELECT "id","title","price","published","user_id","created_at","updated_at" FROM "products"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE "products"[0m
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20220609035803)[0m
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20220519134929),
+(20220530160539);
+
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20220609035803)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "price" decimal DEFAULT NULL, "published" boolean DEFAULT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_dee2631783"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20220519134929),
+(20220530160539);
+
+[0m
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20220609035803)[0m
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20220519134929),
+(20220530160539);
+
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20220609035803)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_products_on_user_id" ON "products" ("user_id")[0m
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20220519134929),
+(20220530160539);
+
+[0m
+  [1m[35m (1.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20220609035803)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20220519134929),
+(20220530160539);
+
+[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "products" ("id","title","price","published","user_id","created_at","updated_at")
+                     SELECT "id","title","price","published","user_id","created_at","updated_at" FROM "aproducts"[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20220519134929),
+(20220530160539);
+
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "aproducts"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20220609035803)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20220519134929),
+(20220530160539);
+
+[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20220609035803)[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20220519134929),
+(20220530160539);
+
+[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2022-06-09 04:04:25.514425"], ["updated_at", "2022-06-09 04:04:25.514425"]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2022-06-09 04:04:25.515703"], ["updated_at", "2022-06-09 04:04:25.515703"]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2022-06-09 04:04:25.517302"], ["updated_at", "2022-06-09 04:04:25.517302"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2022-06-09 04:04:25.517794"], ["updated_at", "2022-06-09 04:04:25.517794"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2022-06-09 04:04:25.518136"], ["updated_at", "2022-06-09 04:04:25.518136"]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Create (1.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2022-06-09 04:04:25.518707"], ["updated_at", "2022-06-09 04:04:25.518707"]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2022-06-09 04:04:25.519684"], ["updated_at", "2022-06-09 04:04:25.519684"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "4e0e52f1fd893586135b2ab179b4dfe4c833a96a"], ["created_at", "2022-06-09 04:04:25.523149"], ["updated_at", "2022-06-09 04:04:25.523149"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "4e0e52f1fd893586135b2ab179b4dfe4c833a96a"], ["created_at", "2022-06-09 04:04:25.526756"], ["updated_at", "2022-06-09 04:04:25.526756"]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "4e0e52f1fd893586135b2ab179b4dfe4c833a96a"], ["created_at", "2022-06-09 04:04:25.527061"], ["updated_at", "2022-06-09 04:04:25.527061"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "4e0e52f1fd893586135b2ab179b4dfe4c833a96a"], ["created_at", "2022-06-09 04:04:25.526690"], ["updated_at", "2022-06-09 04:04:25.526690"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "4e0e52f1fd893586135b2ab179b4dfe4c833a96a"], ["created_at", "2022-06-09 04:04:25.528592"], ["updated_at", "2022-06-09 04:04:25.528592"]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "4e0e52f1fd893586135b2ab179b4dfe4c833a96a"], ["created_at", "2022-06-09 04:04:25.530144"], ["updated_at", "2022-06-09 04:04:25.530144"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "4e0e52f1fd893586135b2ab179b4dfe4c833a96a"], ["created_at", "2022-06-09 04:04:25.530212"], ["updated_at", "2022-06-09 04:04:25.530212"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2022-06-09 04:04:25.530536"], ["updated_at", "2022-06-09 04:04:25.530536"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "4e0e52f1fd893586135b2ab179b4dfe4c833a96a"], ["created_at", "2022-06-09 04:04:25.539249"], ["updated_at", "2022-06-09 04:04:25.539249"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.4ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "orders";
+DELETE FROM "users";
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (980190962, 'TV Plosmo Philopps', 9999.99, 0, 980190962, '2022-06-09 04:04:25.992192', '2022-06-09 04:04:25.992192');
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (298486374, 'Azos Zeenbok', 499.99, 0, 298486374, '2022-06-09 04:04:25.992192', '2022-06-09 04:04:25.992192');
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (963905356, 'Cheap TV', 99.99, 0, 298486374, '2022-06-09 04:04:25.992192', '2022-06-09 04:04:25.992192');
+INSERT INTO "orders" ("id", "user_id", "total", "created_at", "updated_at") VALUES (980190962, 980190962, 9.99, '2022-06-09 04:04:26.003334', '2022-06-09 04:04:26.003334');
+INSERT INTO "orders" ("id", "user_id", "total", "created_at", "updated_at") VALUES (298486374, 298486374, 9.99, '2022-06-09 04:04:26.003334', '2022-06-09 04:04:26.003334');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (980190962, 'one@one.org', '$2a$12$vM76dZ0gJ8Cug0/pD6Bb9Oy5P05QqwerZuUuZ0bs4KoWNroRr7O/q', '2022-06-09 04:04:26.005089', '2022-06-09 04:04:26.005089');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (298486374, 'two@two.org', '$2a$12$zpmTFmRHZ6w7KXMtZ4iVMeKYRLj7JCJbkhZtkqo/.1vL0mPIhoWNa', '2022-06-09 04:04:26.005089', '2022-06-09 04:04:26.005089')[0m
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------
+Api::V1::UsersControllerTest: test_should_update_user
+-----------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.7ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "orders";
+DELETE FROM "users";
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (980190962, 'TV Plosmo Philopps', 9999.99, 0, 980190962, '2022-06-09 04:04:26.011630', '2022-06-09 04:04:26.011630');
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (298486374, 'Azos Zeenbok', 499.99, 0, 298486374, '2022-06-09 04:04:26.011630', '2022-06-09 04:04:26.011630');
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (963905356, 'Cheap TV', 99.99, 0, 298486374, '2022-06-09 04:04:26.011630', '2022-06-09 04:04:26.011630');
+INSERT INTO "orders" ("id", "user_id", "total", "created_at", "updated_at") VALUES (980190962, 980190962, 9.99, '2022-06-09 04:04:26.014304', '2022-06-09 04:04:26.014304');
+INSERT INTO "orders" ("id", "user_id", "total", "created_at", "updated_at") VALUES (298486374, 298486374, 9.99, '2022-06-09 04:04:26.014304', '2022-06-09 04:04:26.014304');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (980190962, 'one@one.org', '$2a$12$oPvT5I8cVShAYDFK3p9fMOHLywx2RyCER5n9I4/NdbObANoN9pTUa', '2022-06-09 04:04:26.016111', '2022-06-09 04:04:26.016111');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (298486374, 'two@two.org', '$2a$12$jSz6FZP7jnFktypHwyQEX.VigU/7hQsyTj4rQ/2I8Iaj8F2aGNWuS', '2022-06-09 04:04:26.016111', '2022-06-09 04:04:26.016111')[0m
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+Api::V1::UsersControllerTest: test_should_destroy_user
+------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.4ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "orders";
+DELETE FROM "users";
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (980190962, 'TV Plosmo Philopps', 9999.99, 0, 980190962, '2022-06-09 04:04:26.017894', '2022-06-09 04:04:26.017894');
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (298486374, 'Azos Zeenbok', 499.99, 0, 298486374, '2022-06-09 04:04:26.017894', '2022-06-09 04:04:26.017894');
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (963905356, 'Cheap TV', 99.99, 0, 298486374, '2022-06-09 04:04:26.017894', '2022-06-09 04:04:26.017894');
+INSERT INTO "orders" ("id", "user_id", "total", "created_at", "updated_at") VALUES (980190962, 980190962, 9.99, '2022-06-09 04:04:26.024990', '2022-06-09 04:04:26.024990');
+INSERT INTO "orders" ("id", "user_id", "total", "created_at", "updated_at") VALUES (298486374, 298486374, 9.99, '2022-06-09 04:04:26.024990', '2022-06-09 04:04:26.024990');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (980190962, 'one@one.org', '$2a$12$IfRraL7HrZGjqDz.nTeixub.uG0cm3RWqPEsqhxG2ORkcN1kAqXUK', '2022-06-09 04:04:26.028028', '2022-06-09 04:04:26.028028');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (298486374, 'two@two.org', '$2a$12$rTNoXi9Q9kE7jcrclQEgmOg5G.XwWDShg72coZHoBbSRKMO8MncD2', '2022-06-09 04:04:26.028028', '2022-06-09 04:04:26.028028')[0m
+  [1m[35m (1.5ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.5ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "orders";
+DELETE FROM "users";
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (980190962, 'TV Plosmo Philopps', 9999.99, 0, 980190962, '2022-06-09 04:04:26.011733', '2022-06-09 04:04:26.011733');
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (298486374, 'Azos Zeenbok', 499.99, 0, 298486374, '2022-06-09 04:04:26.011733', '2022-06-09 04:04:26.011733');
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (963905356, 'Cheap TV', 99.99, 0, 298486374, '2022-06-09 04:04:26.011733', '2022-06-09 04:04:26.011733');
+INSERT INTO "orders" ("id", "user_id", "total", "created_at", "updated_at") VALUES (980190962, 980190962, 9.99, '2022-06-09 04:04:26.016925', '2022-06-09 04:04:26.016925');
+INSERT INTO "orders" ("id", "user_id", "total", "created_at", "updated_at") VALUES (298486374, 298486374, 9.99, '2022-06-09 04:04:26.016925', '2022-06-09 04:04:26.016925');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (980190962, 'one@one.org', '$2a$12$42GhPc2DPWRhUpZn.FMlCe8Sqn0OVmCGckq9h4A/Km0ubZlrxFV3.', '2022-06-09 04:04:26.030076', '2022-06-09 04:04:26.030076');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (298486374, 'two@two.org', '$2a$12$KRv6N2jBVmt6i07bhIhZ3.XoBC2clgIZTORZDUvODjGWIgxU2GYV6', '2022-06-09 04:04:26.030076', '2022-06-09 04:04:26.030076')[0m
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[36mFixtures Load (0.5ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "orders";
+DELETE FROM "users";
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (980190962, 'TV Plosmo Philopps', 9999.99, 0, 980190962, '2022-06-09 04:04:26.007911', '2022-06-09 04:04:26.007911');
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (298486374, 'Azos Zeenbok', 499.99, 0, 298486374, '2022-06-09 04:04:26.007911', '2022-06-09 04:04:26.007911');
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (963905356, 'Cheap TV', 99.99, 0, 298486374, '2022-06-09 04:04:26.007911', '2022-06-09 04:04:26.007911');
+INSERT INTO "orders" ("id", "user_id", "total", "created_at", "updated_at") VALUES (980190962, 980190962, 9.99, '2022-06-09 04:04:26.016234', '2022-06-09 04:04:26.016234');
+INSERT INTO "orders" ("id", "user_id", "total", "created_at", "updated_at") VALUES (298486374, 298486374, 9.99, '2022-06-09 04:04:26.016234', '2022-06-09 04:04:26.016234');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (980190962, 'one@one.org', '$2a$12$edMs7QMDyQJ/U6bRdk9GVexTqF4oI0dBu.zHSPgNEXsf86qM/b04.', '2022-06-09 04:04:26.030679', '2022-06-09 04:04:26.030679');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (298486374, 'two@two.org', '$2a$12$E9UUq3mAZ1Aw5gorKFb/5ee7khwJ/ViQBjr0vh9H1Oiy2sUv1Kqnq', '2022-06-09 04:04:26.030679', '2022-06-09 04:04:26.030679')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------
+Api::V1::UsersControllerTest: test_should_create_user
+-----------------------------------------------------
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+Api::V1::UsersControllerTest: test_should_forbid_update_user
+------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+--------------------------------------------------------------------------
+Api::V1::UsersControllerTest: test_should_not_create_user_with_taken_email
+--------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.5ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "orders";
+DELETE FROM "users";
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (980190962, 'TV Plosmo Philopps', 9999.99, 0, 980190962, '2022-06-09 04:04:26.013698', '2022-06-09 04:04:26.013698');
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (298486374, 'Azos Zeenbok', 499.99, 0, 298486374, '2022-06-09 04:04:26.013698', '2022-06-09 04:04:26.013698');
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (963905356, 'Cheap TV', 99.99, 0, 298486374, '2022-06-09 04:04:26.013698', '2022-06-09 04:04:26.013698');
+INSERT INTO "orders" ("id", "user_id", "total", "created_at", "updated_at") VALUES (980190962, 980190962, 9.99, '2022-06-09 04:04:26.029575', '2022-06-09 04:04:26.029575');
+INSERT INTO "orders" ("id", "user_id", "total", "created_at", "updated_at") VALUES (298486374, 298486374, 9.99, '2022-06-09 04:04:26.029575', '2022-06-09 04:04:26.029575');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (980190962, 'one@one.org', '$2a$12$N1uvTIziRqr2z5n2g5EcNuS6OjVoE06asEFkPrklkZC2lzDKDZj6m', '2022-06-09 04:04:26.031640', '2022-06-09 04:04:26.031640');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (298486374, 'two@two.org', '$2a$12$s2FiegYh/pZ5uF3RVPeOOuGMynWw3q8prizklIgHc8Tro2OBb5Ah.', '2022-06-09 04:04:26.031640', '2022-06-09 04:04:26.031640')[0m
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------
+Api::V1::UsersControllerTest: test_should_forbid_destroy_user
+-------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.5ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "orders";
+DELETE FROM "users";
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (980190962, 'TV Plosmo Philopps', 9999.99, 0, 980190962, '2022-06-09 04:04:26.034166', '2022-06-09 04:04:26.034166');
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (298486374, 'Azos Zeenbok', 499.99, 0, 298486374, '2022-06-09 04:04:26.034166', '2022-06-09 04:04:26.034166');
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (963905356, 'Cheap TV', 99.99, 0, 298486374, '2022-06-09 04:04:26.034166', '2022-06-09 04:04:26.034166');
+INSERT INTO "orders" ("id", "user_id", "total", "created_at", "updated_at") VALUES (980190962, 980190962, 9.99, '2022-06-09 04:04:26.037494', '2022-06-09 04:04:26.037494');
+INSERT INTO "orders" ("id", "user_id", "total", "created_at", "updated_at") VALUES (298486374, 298486374, 9.99, '2022-06-09 04:04:26.037494', '2022-06-09 04:04:26.037494');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (980190962, 'one@one.org', '$2a$12$ZrhsTLRwTKYLeqQ..nHzQuFCsLPY7oAihuVWqsvX719RGH6X3tt5O', '2022-06-09 04:04:26.039596', '2022-06-09 04:04:26.039596');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (298486374, 'two@two.org', '$2a$12$344BaGdOXOhRf38/PqKlh.Jl8YAVlJLgUCweBOJfxKlUu8VlCvaiy', '2022-06-09 04:04:26.039596', '2022-06-09 04:04:26.039596')[0m
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------
+Api::V1::UsersControllerTest: test_should_show_user
+---------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.5ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "orders";
+DELETE FROM "users";
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (980190962, 'TV Plosmo Philopps', 9999.99, 0, 980190962, '2022-06-09 04:04:26.043165', '2022-06-09 04:04:26.043165');
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (298486374, 'Azos Zeenbok', 499.99, 0, 298486374, '2022-06-09 04:04:26.043165', '2022-06-09 04:04:26.043165');
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at") VALUES (963905356, 'Cheap TV', 99.99, 0, 298486374, '2022-06-09 04:04:26.043165', '2022-06-09 04:04:26.043165');
+INSERT INTO "orders" ("id", "user_id", "total", "created_at", "updated_at") VALUES (980190962, 980190962, 9.99, '2022-06-09 04:04:26.048068', '2022-06-09 04:04:26.048068');
+INSERT INTO "orders" ("id", "user_id", "total", "created_at", "updated_at") VALUES (298486374, 298486374, 9.99, '2022-06-09 04:04:26.048068', '2022-06-09 04:04:26.048068');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (980190962, 'one@one.org', '$2a$12$VxnD0/sW9gdvkAg2yYFd2.wSVXUASEuUChdFMxpnhmzCRj5sYR5ue', '2022-06-09 04:04:26.048865', '2022-06-09 04:04:26.048865');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (298486374, 'two@two.org', '$2a$12$E0MM5.oUk/3r3lnCcWpdnev0EfbuY9EZg18DhSAFx998hYhnQVU6i', '2022-06-09 04:04:26.048865', '2022-06-09 04:04:26.048865')[0m
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+OrderTest: test_Should_have_a_positive_total
+--------------------------------------------
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started POST "/api/v1/users" for 127.0.0.1 at 2022-06-09 00:04:26 -0400
+Started DELETE "/api/v1/users/980190962" for 127.0.0.1 at 2022-06-09 00:04:26 -0400
+Started PATCH "/api/v1/users/980190962" for 127.0.0.1 at 2022-06-09 00:04:26 -0400
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+Started PATCH "/api/v1/users/980190962" for 127.0.0.1 at 2022-06-09 00:04:26 -0400
+Started POST "/api/v1/users" for 127.0.0.1 at 2022-06-09 00:04:26 -0400
+Started DELETE "/api/v1/users/980190962" for 127.0.0.1 at 2022-06-09 00:04:26 -0400
+Started GET "/api/v1/users/980190962" for 127.0.0.1 at 2022-06-09 00:04:26 -0400
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"one@one.org", "password"=>"[FILTERED]"}}
+Processing by Api::V1::UsersController#destroy as JSON
+  Parameters: {"id"=>"980190962", "user"=>{}}
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"email"=>"one@one.org"}, "id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"email"=>"one@one.org"}, "id"=>"980190962"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Filter chain halted as :check_owner rendered or redirected
+Completed 403 Forbidden in 1ms (ActiveRecord: 0.1ms | Allocations: 395)
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "one@one.org"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "one@one.org"], ["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"test@test.org", "password"=>"[FILTERED]"}}
+Processing by Api::V1::UsersController#destroy as JSON
+  Parameters: {"id"=>"980190962", "user"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Filter chain halted as :check_owner rendered or redirected
+Completed 403 Forbidden in 1ms (ActiveRecord: 0.1ms | Allocations: 388)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+Api::V1::ProductsControllerTest: test_should_show_products
+----------------------------------------------------------
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"980190962", "user"=>{}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@test.org"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "test@test.org"], ["password_digest", "$2a$04$5tIwJ3Z5uV8ty.CKJEAGkuJmXIuAfY.10bmLomAhYibk2EI/CeJE."], ["created_at", "2022-06-09 04:04:26.159991"], ["updated_at", "2022-06-09 04:04:26.159991"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."user_id" = ?[0m  [["user_id", 980190962]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "products"."id" FROM "products" WHERE "products"."user_id" = ?[0m  [["user_id", 980190962]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 3913)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------
+Api::V1::ProductsControllerTest: test_should_destroy_product
+------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "products"."id" FROM "products" WHERE "products"."user_id" = ?[0m  [["user_id", 980190963]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+Api::V1::ProductsControllerTest: test_should_forbid_create_product
+------------------------------------------------------------------
+Completed 201 Created in 10ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 3592)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "products"."id" FROM "products" WHERE "products"."user_id" = ?[0m  [["user_id", 980190962]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."user_id" = ?[0m  [["user_id", 980190962]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mProduct Destroy (0.5ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/api/v1/products" for 127.0.0.1 at 2022-06-09 00:04:26 -0400
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 980190962]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+Started POST "/api/v1/products" for 127.0.0.1 at 2022-06-09 00:04:26 -0400
+Started DELETE "/api/v1/products/980190962" for 127.0.0.1 at 2022-06-09 00:04:26 -0400
+  [1m[36mOrder Destroy (0.4ms)[0m  [1m[31mDELETE FROM "orders" WHERE "orders"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+Api::V1::ProductsControllerTest: test_should_create_product
+-----------------------------------------------------------
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 26ms (ActiveRecord: 1.5ms | Allocations: 9449)
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Completed 200 OK in 19ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 7107)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."user_id" = ? ORDER BY "products"."id" ASC LIMIT ?[0m  [["user_id", 980190962], ["LIMIT", 1]]
+Processing by Api::V1::ProductsController#index as JSON
+  Parameters: {"product"=>{}}
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."user_id" = ? ORDER BY "products"."id" ASC LIMIT ?[0m  [["user_id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+Api::V1::ProductsControllerTest: test_should_forbid_update_product
+------------------------------------------------------------------
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+Api::V1::ProductsControllerTest: test_should_show_product
+---------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 298486374], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 1308)
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+Api::V1::ProductsControllerTest: test_should_update_product
+-----------------------------------------------------------
+Started PATCH "/api/v1/products/980190962" for 127.0.0.1 at 2022-06-09 00:04:26 -0400
+Started GET "/api/v1/products/980190962" for 127.0.0.1 at 2022-06-09 00:04:26 -0400
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by Api::V1::ProductsController#create as JSON
+Processing by Api::V1::ProductsController#destroy as JSON
+  Parameters: {"product"=>{"title"=>"TV Plosmo Philopps", "price"=>"9999.99", "published"=>false}}
+Started POST "/api/v1/products" for 127.0.0.1 at 2022-06-09 00:04:26 -0400
+Filter chain halted as :check_login rendered or redirected
+Completed 403 Forbidden in 0ms (ActiveRecord: 0.0ms | Allocations: 144)
+Started PATCH "/api/v1/products/980190962" for 127.0.0.1 at 2022-06-09 00:04:26 -0400
+  Parameters: {"id"=>"980190962", "product"=>{}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mProduct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------
+Api::V1::ProductsControllerTest: test_should_forbid_destroy_product
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+-------------------------------------------------------------------
+Completed 204 No Content in 4ms (ActiveRecord: 0.6ms | Allocations: 755)
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 298486374], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------
+ProductTest: test_should_filter_products_by_price_and_sort_them
+---------------------------------------------------------------
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 298486374], ["LIMIT", 1]]
+Started DELETE "/api/v1/users/980190962" for 127.0.0.1 at 2022-06-09 00:04:26 -0400
+Processing by Api::V1::ProductsController#update as JSON
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Parameters: {"product"=>{"title"=>"TV Plosmo Philopps"}, "id"=>"980190962"}
+Processing by Api::V1::ProductsController#show as JSON
+  Parameters: {"id"=>"980190962", "product"=>{}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE (price >= 200)[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 298486374], ["LIMIT", 1]]
+Filter chain halted as :check_owner rendered or redirected
+Completed 403 Forbidden in 1ms (ActiveRecord: 0.1ms | Allocations: 567)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------
+ProductTest: test_should_sort_product_by_most_recent
+----------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "products"."id" FROM "products" WHERE "products"."user_id" = ?[0m  [["user_id", 980190962]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 298486374], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 1406)
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by Api::V1::ProductsController#create as JSON
+  Parameters: {"product"=>{"title"=>"TV Plosmo Philopps", "price"=>"9999.99", "published"=>false}}
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mProduct Update (0.3ms)[0m  [1m[33mUPDATE "products" SET "updated_at" = ? WHERE "products"."id" = ?[0m  [["updated_at", "2022-06-09 04:04:26.200319"], ["id", 298486374]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 963905356], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."updated_at" ASC[0m
+Processing by Api::V1::ProductsController#update as JSON
+  Parameters: {"product"=>{"title"=>"TV Plosmo Philopps"}, "id"=>"980190962"}
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------
+ProductTest: test_should_filter_products_by_price_lower_and_sort_them
+---------------------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+ProductTest: test_should_have_a_positive_price
+----------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 963905356], ["LIMIT", 1]]
+--------------------------------------------------------------
+ProductTest: test_should_filter_products_by_name_and_sort_them
+--------------------------------------------------------------
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE (price <= 200)[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 963905356], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE (lower(title) LIKE'%tv%')[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+ProductTest: test_should_filter_products_by_name
+------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE (lower(title) LIKE'%tv%')[0m
+Processing by Api::V1::UsersController#destroy as JSON
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Parameters: {"id"=>"980190962", "user"=>{}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------
+ProductTest: test_search_should_filter_by_product_ids
+-----------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "published", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "TV Plosmo Philopps"], ["price", 9999.99], ["published", 0], ["user_id", 980190962], ["created_at", "2022-06-09 04:04:26.208016"], ["updated_at", "2022-06-09 04:04:26.208016"]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 298486374], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Filter chain halted as :check_owner rendered or redirected
+---------------------------------------------
+ProductTest: test_search_should_find_cheap_TV
+---------------------------------------------
+Completed 403 Forbidden in 1ms (ActiveRecord: 0.1ms | Allocations: 397)
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ?[0m  [["id", 980190962]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 963905356], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+Completed 201 Created in 9ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 1873)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE (lower(title) LIKE'%tv%') AND (price >= 50.0) AND (price <= 150.0)[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 2648)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------
+ProductTest: test_should_get_all_products_when_no_parameters
+------------------------------------------------------------
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------------
+ProductTest: test_search_should_not_find_"videogame"_and_"100"_as_min_price
+---------------------------------------------------------------------------
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mProduct Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE (lower(title) LIKE'%videogame%') AND (price >= 100.0) LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------
+AuthenticableTest: test_should_get_user_from_Authorization_token
+----------------------------------------------------------------
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------
+AuthenticableTest: test_should_not_get_user_from_empty_Authorization_token
+--------------------------------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------
+Api::V1::TokensControllerTest: test_should_not_get_JWT_token
+------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+UserTest: test_destroy_user_should_destroy_linked_product
+---------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+--------------------------------------------------------
+Api::V1::TokensControllerTest: test_should_get_JWT_token
+--------------------------------------------------------
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+UserTest: test_user_with_a_valid_email_should_be_valid
+------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+Started POST "/api/v1/tokens" for 127.0.0.1 at 2022-06-09 00:04:26 -0400
+Started POST "/api/v1/tokens" for 127.0.0.1 at 2022-06-09 00:04:26 -0400
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@test.org"], ["LIMIT", 1]]
+--------------------------------------------------------
+UserTest: test_user_with_invalid_email_should_be_invalid
+--------------------------------------------------------
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."user_id" = ?[0m  [["user_id", 980190962]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+UserTest: test_user_with_taken_email_should_be_invalid
+------------------------------------------------------
+  [1m[36mProduct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 980190962]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 980190962]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "one@one.org"], ["LIMIT", 1]]
+  [1m[36mOrder Destroy (0.2ms)[0m  [1m[31mDELETE FROM "orders" WHERE "orders"."id" = ?[0m  [["id", 980190962]]
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+Processing by Api::V1::TokensController#create as JSON
+  Parameters: {"user"=>{"email"=>"one@one.org", "password"=>"[FILTERED]"}, "token"=>{"user"=>{"email"=>"one@one.org", "password"=>"[FILTERED]"}}}
+Processing by Api::V1::TokensController#create as JSON
+  Parameters: {"user"=>{"email"=>"one@one.org", "password"=>"[FILTERED]"}, "token"=>{"user"=>{"email"=>"one@one.org", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "one@one.org"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "one@one.org"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 215ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 346826)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Completed 401 Unauthorized in 208ms (ActiveRecord: 0.1ms | Allocations: 456)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 200 OK in 210ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 586)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
