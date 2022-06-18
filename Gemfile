@@ -49,3 +49,5 @@ gem "faker", "~> 2.21"
 gem "jsonapi-serializer", "~> 2.2"
 
 gem "rack-cors", "~> 1.1"
+
+gem "kaminari", "~> 1.2"
