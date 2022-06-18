@@ -42747,3 +42747,942 @@ Completed 200 OK in 262ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 883
 Completed 401 Unauthorized in 265ms (ActiveRecord: 0.1ms | Allocations: 455)
   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (2.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[36mTruncate Tables (4.6ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "orders";
+DELETE FROM "placements";
+DELETE FROM "products"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[36mTruncate Tables (4.3ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "orders";
+DELETE FROM "placements";
+DELETE FROM "products"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[36mTruncate Tables (5.7ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "orders";
+DELETE FROM "placements";
+DELETE FROM "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTruncate Tables (5.0ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "orders";
+DELETE FROM "placements";
+DELETE FROM "products"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTruncate Tables (5.9ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "orders";
+DELETE FROM "placements";
+DELETE FROM "products"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[36mTruncate Tables (5.6ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "orders";
+DELETE FROM "placements";
+DELETE FROM "products"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTruncate Tables (4.7ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "orders";
+DELETE FROM "placements";
+DELETE FROM "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTruncate Tables (3.4ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "orders";
+DELETE FROM "placements";
+DELETE FROM "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.4ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "placements";
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at", "quantity") VALUES (980190962, 'TV Plosmo Philopps', 9999.99, 0, 980190962, '2022-06-18 18:10:00.569404', '2022-06-18 18:10:00.569404', 5);
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at", "quantity") VALUES (298486374, 'Azos Zeenbok', 499.99, 0, 298486374, '2022-06-18 18:10:00.569404', '2022-06-18 18:10:00.569404', 5);
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at", "quantity") VALUES (963905356, 'Cheap TV', 99.99, 0, 298486374, '2022-06-18 18:10:00.569404', '2022-06-18 18:10:00.569404', 5);
+INSERT INTO "orders" ("id", "user_id", "total", "created_at", "updated_at") VALUES (980190962, 980190962, 9.99, '2022-06-18 18:10:00.571267', '2022-06-18 18:10:00.571267');
+INSERT INTO "orders" ("id", "user_id", "total", "created_at", "updated_at") VALUES (298486374, 298486374, 9.99, '2022-06-18 18:10:00.571267', '2022-06-18 18:10:00.571267');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (980190962, 'one@one.org', '$2a$12$sFr7uNdgX85SS1oLL4tdO.CiJGXkZryLwfpzzEaB12Mvqai9PbRTS', '2022-06-18 18:10:00.571893', '2022-06-18 18:10:00.571893');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (298486374, 'two@two.org', '$2a$12$WP43iFRSfjJGSneolfcJiepAtISJsMvhwRAjFARUpcBzPK386a6/.', '2022-06-18 18:10:00.571893', '2022-06-18 18:10:00.571893');
+INSERT INTO "placements" ("id", "order_id", "product_id", "created_at", "updated_at", "quantity") VALUES (980190962, 980190962, 980190962, '2022-06-18 18:10:00.572471', '2022-06-18 18:10:00.572471', 5);
+INSERT INTO "placements" ("id", "order_id", "product_id", "created_at", "updated_at", "quantity") VALUES (298486374, 298486374, 298486374, '2022-06-18 18:10:00.572471', '2022-06-18 18:10:00.572471', 5)[0m
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+UserTest: test_user_with_a_valid_email_should_be_valid
+------------------------------------------------------
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@test.org"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------
+Api::V1::UsersControllerTest: test_should_show_user
+---------------------------------------------------
+  [1m[36mFixtures Load (0.6ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "placements";
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at", "quantity") VALUES (980190962, 'TV Plosmo Philopps', 9999.99, 0, 980190962, '2022-06-18 18:10:00.577935', '2022-06-18 18:10:00.577935', 5);
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at", "quantity") VALUES (298486374, 'Azos Zeenbok', 499.99, 0, 298486374, '2022-06-18 18:10:00.577935', '2022-06-18 18:10:00.577935', 5);
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at", "quantity") VALUES (963905356, 'Cheap TV', 99.99, 0, 298486374, '2022-06-18 18:10:00.577935', '2022-06-18 18:10:00.577935', 5);
+INSERT INTO "orders" ("id", "user_id", "total", "created_at", "updated_at") VALUES (980190962, 980190962, 9.99, '2022-06-18 18:10:00.580392', '2022-06-18 18:10:00.580392');
+INSERT INTO "orders" ("id", "user_id", "total", "created_at", "updated_at") VALUES (298486374, 298486374, 9.99, '2022-06-18 18:10:00.580392', '2022-06-18 18:10:00.580392');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (980190962, 'one@one.org', '$2a$12$.Ju8.VRw8KJaBntVelFBtuOG53U3WYqWBxVjI1hP71ZF4KsZliITe', '2022-06-18 18:10:00.581157', '2022-06-18 18:10:00.581157');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (298486374, 'two@two.org', '$2a$12$l7NElAnI3U5Sn9vQf/CU2unhvO08ds6AXtOcIPUBodJL6pszmeRw.', '2022-06-18 18:10:00.581157', '2022-06-18 18:10:00.581157');
+INSERT INTO "placements" ("id", "order_id", "product_id", "created_at", "updated_at", "quantity") VALUES (980190962, 980190962, 980190962, '2022-06-18 18:10:00.581845', '2022-06-18 18:10:00.581845', 5);
+INSERT INTO "placements" ("id", "order_id", "product_id", "created_at", "updated_at", "quantity") VALUES (298486374, 298486374, 298486374, '2022-06-18 18:10:00.581845', '2022-06-18 18:10:00.581845', 5)[0m
+  [1m[36mFixtures Load (0.5ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "placements";
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at", "quantity") VALUES (980190962, 'TV Plosmo Philopps', 9999.99, 0, 980190962, '2022-06-18 18:10:00.578993', '2022-06-18 18:10:00.578993', 5);
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at", "quantity") VALUES (298486374, 'Azos Zeenbok', 499.99, 0, 298486374, '2022-06-18 18:10:00.578993', '2022-06-18 18:10:00.578993', 5);
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at", "quantity") VALUES (963905356, 'Cheap TV', 99.99, 0, 298486374, '2022-06-18 18:10:00.578993', '2022-06-18 18:10:00.578993', 5);
+INSERT INTO "orders" ("id", "user_id", "total", "created_at", "updated_at") VALUES (980190962, 980190962, 9.99, '2022-06-18 18:10:00.580784', '2022-06-18 18:10:00.580784');
+INSERT INTO "orders" ("id", "user_id", "total", "created_at", "updated_at") VALUES (298486374, 298486374, 9.99, '2022-06-18 18:10:00.580784', '2022-06-18 18:10:00.580784');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (980190962, 'one@one.org', '$2a$12$Gy0mwoL/gQkWmeIZFU51fuVCxbD6JRm2W5OHjTf/JV3RgltSzkvV2', '2022-06-18 18:10:00.581451', '2022-06-18 18:10:00.581451');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (298486374, 'two@two.org', '$2a$12$p.e4FK/esPwvKsCRllBoj.XKiE1EG3zDpXX5sAEQO0EiXW27Km4q6', '2022-06-18 18:10:00.581451', '2022-06-18 18:10:00.581451');
+INSERT INTO "placements" ("id", "order_id", "product_id", "created_at", "updated_at", "quantity") VALUES (980190962, 980190962, 980190962, '2022-06-18 18:10:00.582057', '2022-06-18 18:10:00.582057', 5);
+INSERT INTO "placements" ("id", "order_id", "product_id", "created_at", "updated_at", "quantity") VALUES (298486374, 298486374, 298486374, '2022-06-18 18:10:00.582057', '2022-06-18 18:10:00.582057', 5)[0m
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+UserTest: test_user_with_taken_email_should_be_invalid
+------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+--------------------------------------------------------
+UserTest: test_user_with_invalid_email_should_be_invalid
+--------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (1.4ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "placements";
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at", "quantity") VALUES (980190962, 'TV Plosmo Philopps', 9999.99, 0, 980190962, '2022-06-18 18:10:00.579435', '2022-06-18 18:10:00.579435', 5);
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at", "quantity") VALUES (298486374, 'Azos Zeenbok', 499.99, 0, 298486374, '2022-06-18 18:10:00.579435', '2022-06-18 18:10:00.579435', 5);
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at", "quantity") VALUES (963905356, 'Cheap TV', 99.99, 0, 298486374, '2022-06-18 18:10:00.579435', '2022-06-18 18:10:00.579435', 5);
+INSERT INTO "orders" ("id", "user_id", "total", "created_at", "updated_at") VALUES (980190962, 980190962, 9.99, '2022-06-18 18:10:00.581208', '2022-06-18 18:10:00.581208');
+INSERT INTO "orders" ("id", "user_id", "total", "created_at", "updated_at") VALUES (298486374, 298486374, 9.99, '2022-06-18 18:10:00.581208', '2022-06-18 18:10:00.581208');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (980190962, 'one@one.org', '$2a$12$/CeBEMfhlHG8jBgpVCmzqu6H8a3dTRsaRzErN77313TG/Jh7vg4dG', '2022-06-18 18:10:00.581852', '2022-06-18 18:10:00.581852');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (298486374, 'two@two.org', '$2a$12$9XS8WK.1dgtuspvLbcpJ.uReaPvzA4z/HPNB6XmnX9n7HMvJFNJ4e', '2022-06-18 18:10:00.581852', '2022-06-18 18:10:00.581852');
+INSERT INTO "placements" ("id", "order_id", "product_id", "created_at", "updated_at", "quantity") VALUES (980190962, 980190962, 980190962, '2022-06-18 18:10:00.582473', '2022-06-18 18:10:00.582473', 5);
+INSERT INTO "placements" ("id", "order_id", "product_id", "created_at", "updated_at", "quantity") VALUES (298486374, 298486374, 298486374, '2022-06-18 18:10:00.582473', '2022-06-18 18:10:00.582473', 5)[0m
+  [1m[36mFixtures Load (1.2ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "placements";
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at", "quantity") VALUES (980190962, 'TV Plosmo Philopps', 9999.99, 0, 980190962, '2022-06-18 18:10:00.582033', '2022-06-18 18:10:00.582033', 5);
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at", "quantity") VALUES (298486374, 'Azos Zeenbok', 499.99, 0, 298486374, '2022-06-18 18:10:00.582033', '2022-06-18 18:10:00.582033', 5);
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at", "quantity") VALUES (963905356, 'Cheap TV', 99.99, 0, 298486374, '2022-06-18 18:10:00.582033', '2022-06-18 18:10:00.582033', 5);
+INSERT INTO "orders" ("id", "user_id", "total", "created_at", "updated_at") VALUES (980190962, 980190962, 9.99, '2022-06-18 18:10:00.583879', '2022-06-18 18:10:00.583879');
+INSERT INTO "orders" ("id", "user_id", "total", "created_at", "updated_at") VALUES (298486374, 298486374, 9.99, '2022-06-18 18:10:00.583879', '2022-06-18 18:10:00.583879');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (980190962, 'one@one.org', '$2a$12$eo6QJFnFqgi5wIbCXtUB../uykHfK/7wbS720b8wW0Vg9/DKy1KDu', '2022-06-18 18:10:00.584535', '2022-06-18 18:10:00.584535');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (298486374, 'two@two.org', '$2a$12$2qHtRM7p.RmAQiJfm7iJYuEn0GFoc6QNIpCZg9EwfZeSguhLHbdX6', '2022-06-18 18:10:00.584535', '2022-06-18 18:10:00.584535');
+INSERT INTO "placements" ("id", "order_id", "product_id", "created_at", "updated_at", "quantity") VALUES (980190962, 980190962, 980190962, '2022-06-18 18:10:00.585190', '2022-06-18 18:10:00.585190', 5);
+INSERT INTO "placements" ("id", "order_id", "product_id", "created_at", "updated_at", "quantity") VALUES (298486374, 298486374, 298486374, '2022-06-18 18:10:00.585190', '2022-06-18 18:10:00.585190', 5)[0m
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+---------------------------------------------------------
+UserTest: test_destroy_user_should_destroy_linked_product
+---------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------
+Api::V1::UsersControllerTest: test_should_forbid_update_user
+------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "one@one.org"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.5ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "placements";
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at", "quantity") VALUES (980190962, 'TV Plosmo Philopps', 9999.99, 0, 980190962, '2022-06-18 18:10:00.585311', '2022-06-18 18:10:00.585311', 5);
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at", "quantity") VALUES (298486374, 'Azos Zeenbok', 499.99, 0, 298486374, '2022-06-18 18:10:00.585311', '2022-06-18 18:10:00.585311', 5);
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at", "quantity") VALUES (963905356, 'Cheap TV', 99.99, 0, 298486374, '2022-06-18 18:10:00.585311', '2022-06-18 18:10:00.585311', 5);
+INSERT INTO "orders" ("id", "user_id", "total", "created_at", "updated_at") VALUES (980190962, 980190962, 9.99, '2022-06-18 18:10:00.589589', '2022-06-18 18:10:00.589589');
+INSERT INTO "orders" ("id", "user_id", "total", "created_at", "updated_at") VALUES (298486374, 298486374, 9.99, '2022-06-18 18:10:00.589589', '2022-06-18 18:10:00.589589');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (980190962, 'one@one.org', '$2a$12$l/etvnAi7ZJ9Mby2ijlOJePkOsn26dXNwMAGAo/wScDk8urRcTbeK', '2022-06-18 18:10:00.590959', '2022-06-18 18:10:00.590959');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (298486374, 'two@two.org', '$2a$12$bDSBzlQeiF.Xb30NcqsXXuhjE1DZjxSKF9iUcKwS0KgUun9OpRzTe', '2022-06-18 18:10:00.590959', '2022-06-18 18:10:00.590959');
+INSERT INTO "placements" ("id", "order_id", "product_id", "created_at", "updated_at", "quantity") VALUES (980190962, 980190962, 980190962, '2022-06-18 18:10:00.592084', '2022-06-18 18:10:00.592084', 5);
+INSERT INTO "placements" ("id", "order_id", "product_id", "created_at", "updated_at", "quantity") VALUES (298486374, 298486374, 298486374, '2022-06-18 18:10:00.592084', '2022-06-18 18:10:00.592084', 5)[0m
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+Api::V1::UsersControllerTest: test_should_destroy_user
+------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.5ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "placements";
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at", "quantity") VALUES (980190962, 'TV Plosmo Philopps', 9999.99, 0, 980190962, '2022-06-18 18:10:00.593418', '2022-06-18 18:10:00.593418', 5);
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at", "quantity") VALUES (298486374, 'Azos Zeenbok', 499.99, 0, 298486374, '2022-06-18 18:10:00.593418', '2022-06-18 18:10:00.593418', 5);
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at", "quantity") VALUES (963905356, 'Cheap TV', 99.99, 0, 298486374, '2022-06-18 18:10:00.593418', '2022-06-18 18:10:00.593418', 5);
+INSERT INTO "orders" ("id", "user_id", "total", "created_at", "updated_at") VALUES (980190962, 980190962, 9.99, '2022-06-18 18:10:00.596147', '2022-06-18 18:10:00.596147');
+INSERT INTO "orders" ("id", "user_id", "total", "created_at", "updated_at") VALUES (298486374, 298486374, 9.99, '2022-06-18 18:10:00.596147', '2022-06-18 18:10:00.596147');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (980190962, 'one@one.org', '$2a$12$yMekW1lXFb3Mh0Rady0GcuZMjoPNkesXGv.JBD6EdhAtQ5JKfnVyG', '2022-06-18 18:10:00.597194', '2022-06-18 18:10:00.597194');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (298486374, 'two@two.org', '$2a$12$PDvkDIuZePHj5.7f1VjEp.krGslitoMAo8xAPDEEaFCfVnW3m6NV.', '2022-06-18 18:10:00.597194', '2022-06-18 18:10:00.597194');
+INSERT INTO "placements" ("id", "order_id", "product_id", "created_at", "updated_at", "quantity") VALUES (980190962, 980190962, 980190962, '2022-06-18 18:10:00.598099', '2022-06-18 18:10:00.598099', 5);
+INSERT INTO "placements" ("id", "order_id", "product_id", "created_at", "updated_at", "quantity") VALUES (298486374, 298486374, 298486374, '2022-06-18 18:10:00.598099', '2022-06-18 18:10:00.598099', 5)[0m
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------
+Api::V1::UsersControllerTest: test_should_forbid_destroy_user
+-------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."user_id" = ?[0m  [["user_id", 980190962]]
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.5ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "placements";
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at", "quantity") VALUES (980190962, 'TV Plosmo Philopps', 9999.99, 0, 980190962, '2022-06-18 18:10:00.596195', '2022-06-18 18:10:00.596195', 5);
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at", "quantity") VALUES (298486374, 'Azos Zeenbok', 499.99, 0, 298486374, '2022-06-18 18:10:00.596195', '2022-06-18 18:10:00.596195', 5);
+INSERT INTO "products" ("id", "title", "price", "published", "user_id", "created_at", "updated_at", "quantity") VALUES (963905356, 'Cheap TV', 99.99, 0, 298486374, '2022-06-18 18:10:00.596195', '2022-06-18 18:10:00.596195', 5);
+INSERT INTO "orders" ("id", "user_id", "total", "created_at", "updated_at") VALUES (980190962, 980190962, 9.99, '2022-06-18 18:10:00.601097', '2022-06-18 18:10:00.601097');
+INSERT INTO "orders" ("id", "user_id", "total", "created_at", "updated_at") VALUES (298486374, 298486374, 9.99, '2022-06-18 18:10:00.601097', '2022-06-18 18:10:00.601097');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (980190962, 'one@one.org', '$2a$12$xQcAKEjLyF7q0VEkP6rINOOmsJFo1gx2pVRSxOc9Uh7joHRqdQfxK', '2022-06-18 18:10:00.601837', '2022-06-18 18:10:00.601837');
+INSERT INTO "users" ("id", "email", "password_digest", "created_at", "updated_at") VALUES (298486374, 'two@two.org', '$2a$12$jb1gU3BKgAEtyWIFLz.hFO5RSgPRmCWDG13EFqf5ljoCYJ2.fqtQi', '2022-06-18 18:10:00.601837', '2022-06-18 18:10:00.601837');
+INSERT INTO "placements" ("id", "order_id", "product_id", "created_at", "updated_at", "quantity") VALUES (980190962, 980190962, 980190962, '2022-06-18 18:10:00.602635', '2022-06-18 18:10:00.602635', 5);
+INSERT INTO "placements" ("id", "order_id", "product_id", "created_at", "updated_at", "quantity") VALUES (298486374, 298486374, 298486374, '2022-06-18 18:10:00.602635', '2022-06-18 18:10:00.602635', 5)[0m
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------
+Api::V1::UsersControllerTest: test_should_update_user
+-----------------------------------------------------
+  [1m[36mPlacement Load (0.1ms)[0m  [1m[34mSELECT "placements".* FROM "placements" WHERE "placements"."product_id" = ?[0m  [["product_id", 980190962]]
+  [1m[36mPlacement Destroy (0.4ms)[0m  [1m[31mDELETE FROM "placements" WHERE "placements"."id" = ?[0m  [["id", 980190962]]
+  [1m[36mProduct Destroy (0.1ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 980190962]]
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 980190962]]
+  [1m[36mPlacement Load (0.1ms)[0m  [1m[34mSELECT "placements".* FROM "placements" WHERE "placements"."order_id" = ?[0m  [["order_id", 980190962]]
+  [1m[36mOrder Destroy (0.2ms)[0m  [1m[31mDELETE FROM "orders" WHERE "orders"."id" = ?[0m  [["id", 980190962]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------
+Api::V1::UsersControllerTest: test_should_create_user
+-----------------------------------------------------
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/api/v1/users/980190962" for 127.0.0.1 at 2022-06-18 14:10:00 -0400
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+Started PATCH "/api/v1/users/980190962" for 127.0.0.1 at 2022-06-18 14:10:00 -0400
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+Started DELETE "/api/v1/users/980190962" for 127.0.0.1 at 2022-06-18 14:10:00 -0400
+Started PATCH "/api/v1/users/980190962" for 127.0.0.1 at 2022-06-18 14:10:00 -0400
+Started DELETE "/api/v1/users/980190962" for 127.0.0.1 at 2022-06-18 14:10:00 -0400
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"980190962", "user"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"email"=>"one@one.org"}, "id"=>"980190962"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "products"."id" FROM "products" WHERE "products"."user_id" = ?[0m  [["user_id", 980190962]]
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."user_id" = ?[0m  [["user_id", 980190962]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Filter chain halted as :check_owner rendered or redirected
+Completed 403 Forbidden in 6ms (ActiveRecord: 0.1ms | Allocations: 395)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------
+Api::V1::UsersControllerTest: test_should_not_create_user_with_taken_email
+--------------------------------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+Started POST "/api/v1/users" for 127.0.0.1 at 2022-06-18 14:10:00 -0400
+Completed 200 OK in 20ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 7472)
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."user_id" = ? ORDER BY "products"."id" ASC LIMIT ?[0m  [["user_id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."user_id" = ? ORDER BY "products"."id" ASC LIMIT ?[0m  [["user_id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Processing by Api::V1::UsersController#destroy as JSON
+  Parameters: {"id"=>"980190962", "user"=>{}}
+Started POST "/api/v1/users" for 127.0.0.1 at 2022-06-18 14:10:00 -0400
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"email"=>"one@one.org"}, "id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "one@one.org"], ["id", 980190962], ["LIMIT", 1]]
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"one@one.org", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#destroy as JSON
+  Parameters: {"id"=>"980190962", "user"=>{}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."user_id" = ?[0m  [["user_id", 980190962]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------------------------------
+OrderMailerTest: test_should_be_set_to_be_delivered_to_the_user_from_the_order_passed_in
+----------------------------------------------------------------------------------------
+Filter chain halted as :check_owner rendered or redirected
+Completed 403 Forbidden in 2ms (ActiveRecord: 0.1ms | Allocations: 388)
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "one@one.org"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "products"."id" FROM "products" WHERE "products"."user_id" = ?[0m  [["user_id", 980190962]]
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 3891)
+  [1m[36mPlacement Load (0.1ms)[0m  [1m[34mSELECT "placements".* FROM "placements" WHERE "placements"."product_id" = ?[0m  [["product_id", 980190962]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+Api::V1::ProductsControllerTest: test_should_forbid_update_product
+------------------------------------------------------------------
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"test@test.org", "password"=>"[FILTERED]"}}
+  Rendering order_mailer/send_confirmation.html.erb within layouts/mailer
+  [1m[36mPlacement Destroy (0.3ms)[0m  [1m[31mDELETE FROM "placements" WHERE "placements"."id" = ?[0m  [["id", 980190962]]
+  [1m[36mProduct Destroy (0.1ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@test.org"], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 980190962]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "test@test.org"], ["password_digest", "$2a$04$XHu16sxFWK/YNZv1CGvHW.hnQnl3Aa9F9zBDtBM9xAmAY5lQb6w9u"], ["created_at", "2022-06-18 18:10:00.739004"], ["updated_at", "2022-06-18 18:10:00.739004"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?[0m  [["order_id", 980190962]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?[0m  [["order_id", 980190962]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+Api::V1::ProductsControllerTest: test_should_show_product
+---------------------------------------------------------
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 298486374], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "products"."id" FROM "products" WHERE "products"."user_id" = ?[0m  [["user_id", 980190963]]
+Completed 201 Created in 9ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 2003)
+  [1m[36mPlacement Load (0.1ms)[0m  [1m[34mSELECT "placements".* FROM "placements" WHERE "placements"."order_id" = ?[0m  [["order_id", 980190962]]
+  [1m[36mOrder Destroy (0.1ms)[0m  [1m[31mDELETE FROM "orders" WHERE "orders"."id" = ?[0m  [["id", 980190962]]
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+Started PATCH "/api/v1/products/980190962" for 127.0.0.1 at 2022-06-18 14:10:00 -0400
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 34ms (ActiveRecord: 1.5ms | Allocations: 13727)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+Api::V1::ProductsControllerTest: test_should_show_products
+----------------------------------------------------------
+Started GET "/api/v1/products/980190962" for 127.0.0.1 at 2022-06-18 14:10:00 -0400
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+Api::V1::ProductsControllerTest: test_should_create_product
+-----------------------------------------------------------
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+Started GET "/api/v1/products" for 127.0.0.1 at 2022-06-18 14:10:00 -0400
+Processing by Api::V1::ProductsController#update as JSON
+  Parameters: {"product"=>{"title"=>"TV Plosmo Philopps"}, "id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started POST "/api/v1/products" for 127.0.0.1 at 2022-06-18 14:10:00 -0400
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 298486374], ["LIMIT", 1]]
+Filter chain halted as :check_owner rendered or redirected
+Completed 403 Forbidden in 2ms (ActiveRecord: 0.1ms | Allocations: 569)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Processing by Api::V1::ProductsController#index as JSON
+  Parameters: {"product"=>{}}
+Processing by Api::V1::ProductsController#show as JSON
+  Parameters: {"id"=>"980190962", "product"=>{}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------
+Api::V1::ProductsControllerTest: test_should_destroy_product
+------------------------------------------------------------
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by Api::V1::ProductsController#create as JSON
+  Parameters: {"product"=>{"title"=>"TV Plosmo Philopps", "price"=>"9999.99", "published"=>false}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 901)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started DELETE "/api/v1/products/980190962" for 127.0.0.1 at 2022-06-18 14:10:00 -0400
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "products"."id" FROM "products" WHERE "products"."user_id" = ?[0m  [["user_id", 980190962]]
+Api::V1::ProductsControllerTest: test_should_update_product
+-----------------------------------------------------------
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 1759)
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "published", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "TV Plosmo Philopps"], ["price", 9999.99], ["published", 0], ["user_id", 980190962], ["created_at", "2022-06-18 18:10:00.775303"], ["updated_at", "2022-06-18 18:10:00.775303"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+Api::V1::ProductsControllerTest: test_should_forbid_create_product
+------------------------------------------------------------------
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+Started PATCH "/api/v1/products/980190962" for 127.0.0.1 at 2022-06-18 14:10:00 -0400
+Completed 201 Created in 7ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 2024)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+Started POST "/api/v1/products" for 127.0.0.1 at 2022-06-18 14:10:00 -0400
+Processing by Api::V1::ProductsController#destroy as JSON
+  Parameters: {"id"=>"980190962", "product"=>{}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------
+Api::V1::ProductsControllerTest: test_should_forbid_destroy_product
+-------------------------------------------------------------------
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mPlacement Load (0.1ms)[0m  [1m[34mSELECT "placements".* FROM "placements" WHERE "placements"."product_id" = ?[0m  [["product_id", 980190962]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 298486374], ["LIMIT", 1]]
+Processing by Api::V1::ProductsController#update as JSON
+  Parameters: {"product"=>{"title"=>"TV Plosmo Philopps"}, "id"=>"980190962"}
+Processing by Api::V1::ProductsController#create as JSON
+  Parameters: {"product"=>{"title"=>"TV Plosmo Philopps", "price"=>"9999.99", "published"=>false}}
+Filter chain halted as :check_login rendered or redirected
+Completed 403 Forbidden in 0ms (ActiveRecord: 0.0ms | Allocations: 89)
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+Started DELETE "/api/v1/users/980190962" for 127.0.0.1 at 2022-06-18 14:10:00 -0400
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+OrderTest: test_builds_2_placements_for_the_order
+-------------------------------------------------
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 1670)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mPlacement Destroy (0.8ms)[0m  [1m[31mDELETE FROM "placements" WHERE "placements"."id" = ?[0m  [["id", 980190962]]
+  [1m[36mProduct Destroy (0.1ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 15ms (ActiveRecord: 1.2ms | Allocations: 5787)
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 298486374], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+Processing by Api::V1::UsersController#destroy as JSON
+  Parameters: {"id"=>"980190962", "user"=>{}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+----------------------------------------------------------------------------
+PlacementTest: test_decreases_the_product_quantity_by_the_placement_quantity
+----------------------------------------------------------------------------
+  [1m[36mPlacement Load (0.2ms)[0m  [1m[34mSELECT "placements".* FROM "placements" WHERE "placements"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 298486374], ["LIMIT", 1]]
+Filter chain halted as :check_owner rendered or redirected
+Completed 403 Forbidden in 1ms (ActiveRecord: 0.1ms | Allocations: 402)
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------------
+ProductTest: test_search_should_not_find_"videogame"_and_"100"_as_min_price
+---------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mProduct Update All (0.3ms)[0m  [1m[33mUPDATE "products" SET "quantity" = COALESCE("quantity", 0) - ? WHERE "products"."id" = ?[0m  [["quantity", 5], ["id", 980190962]]
+  [1m[36mProduct Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE (lower(title) LIKE'%videogame%') AND (price >= 100.0) LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "placements"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------
+ProductTest: test_should_filter_products_by_name_and_sort_them
+--------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+ProductTest: test_search_should_find_cheap_TV
+---------------------------------------------
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 963905356], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 963905356], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------
+ProductTest: test_should_filter_products_by_price_and_sort_them
+---------------------------------------------------------------
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE (lower(title) LIKE'%tv%') AND (price >= 50.0) AND (price <= 150.0)[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 298486374], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE (lower(title) LIKE'%tv%')[0m
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE (price >= 200)[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------
+ProductTest: test_should_sort_product_by_most_recent
+----------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+ProductTest: test_should_have_a_positive_price
+----------------------------------------------
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 298486374], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("products"."price") FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?[0m  [["order_id", 980190962]]
+  [1m[36mProduct Update (0.3ms)[0m  [1m[33mUPDATE "products" SET "updated_at" = ? WHERE "products"."id" = ?[0m  [["updated_at", "2022-06-18 18:10:00.813074"], ["id", 298486374]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 963905356], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 298486374], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."updated_at" ASC[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------
+ProductTest: test_search_should_filter_by_product_ids
+-----------------------------------------------------
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mOrder Update (0.3ms)[0m  [1m[33mUPDATE "orders" SET "total" = ?, "updated_at" = ? WHERE "orders"."id" = ?[0m  [["total", 9999.99], ["updated_at", "2022-06-18 18:10:00.816342"], ["id", 980190962]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mPlacement Create (0.2ms)[0m  [1m[32mINSERT INTO "placements" ("order_id", "product_id", "created_at", "updated_at", "quantity") VALUES (?, ?, ?, ?, ?)[0m  [["order_id", 980190962], ["product_id", 980190962], ["created_at", "2022-06-18 18:10:00.817683"], ["updated_at", "2022-06-18 18:10:00.817683"], ["quantity", 2]]
+  [1m[36mProduct Update All (0.1ms)[0m  [1m[33mUPDATE "products" SET "quantity" = COALESCE("quantity", 0) - ? WHERE "products"."id" = ?[0m  [["quantity", 2], ["id", 980190962]]
+  [1m[36mPlacement Create (0.1ms)[0m  [1m[32mINSERT INTO "placements" ("order_id", "product_id", "created_at", "updated_at", "quantity") VALUES (?, ?, ?, ?, ?)[0m  [["order_id", 980190962], ["product_id", 298486374], ["created_at", "2022-06-18 18:10:00.819598"], ["updated_at", "2022-06-18 18:10:00.819598"], ["quantity", 3]]
+  [1m[36mProduct Update All (0.1ms)[0m  [1m[33mUPDATE "products" SET "quantity" = COALESCE("quantity", 0) - ? WHERE "products"."id" = ?[0m  [["quantity", 3], ["id", 298486374]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+---------------------------------------------------------------------
+ProductTest: test_should_filter_products_by_price_lower_and_sort_them
+---------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "placements"[0m
+------------------------------------------------------------
+ProductTest: test_should_get_all_products_when_no_parameters
+------------------------------------------------------------
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 963905356], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE (price <= 200)[0m
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+ProductTest: test_should_filter_products_by_name
+------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------
+Api::V1::TokensControllerTest: test_should_not_get_JWT_token
+------------------------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE (lower(title) LIKE'%tv%')[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Api::V1::TokensControllerTest: test_should_get_JWT_token
+--------------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------
+Api::V1::OrdersControllerTest: test_should_forbid_orders_for_unlogged
+---------------------------------------------------------------------
+Started POST "/api/v1/tokens" for 127.0.0.1 at 2022-06-18 14:10:00 -0400
+Started POST "/api/v1/tokens" for 127.0.0.1 at 2022-06-18 14:10:00 -0400
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 298486374], ["LIMIT", 1]]
+Started GET "/api/v1/orders" for 127.0.0.1 at 2022-06-18 14:10:00 -0400
+Processing by Api::V1::TokensController#create as JSON
+  Parameters: {"user"=>{"email"=>"one@one.org", "password"=>"[FILTERED]"}, "token"=>{"user"=>{"email"=>"one@one.org", "password"=>"[FILTERED]"}}}
+Processing by Api::V1::TokensController#create as JSON
+  Parameters: {"user"=>{"email"=>"one@one.org", "password"=>"[FILTERED]"}, "token"=>{"user"=>{"email"=>"one@one.org", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "one@one.org"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "one@one.org"], ["LIMIT", 1]]
+Processing by Api::V1::OrdersController#index as JSON
+  Parameters: {"order"=>{}}
+Filter chain halted as :check_login rendered or redirected
+Completed 403 Forbidden in 0ms (ActiveRecord: 0.0ms | Allocations: 106)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------------------------------
+Api::V1::OrdersControllerTest: test_should_create_order_with_two_products_and_placements
+----------------------------------------------------------------------------------------
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 298486374], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "placements"[0m
+Started POST "/api/v1/orders" for 127.0.0.1 at 2022-06-18 14:10:00 -0400
+Processing by Api::V1::OrdersController#create as JSON
+  Parameters: {"order"=>{"product_ids_and_quantities"=>[{"product_id"=>980190962, "quantity"=>2}, {"product_id"=>298486374, "quantity"=>3}]}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mOrder Create (0.3ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 980190962], ["total", 0.0], ["created_at", "2022-06-18 18:10:00.867749"], ["updated_at", "2022-06-18 18:10:00.867749"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT SUM("products"."price") FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?[0m  [["order_id", 980190963]]
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 298486374], ["LIMIT", 1]]
+  [1m[36mPlacement Create (0.1ms)[0m  [1m[32mINSERT INTO "placements" ("order_id", "product_id", "created_at", "updated_at", "quantity") VALUES (?, ?, ?, ?, ?)[0m  [["order_id", 980190963], ["product_id", 980190962], ["created_at", "2022-06-18 18:10:00.871385"], ["updated_at", "2022-06-18 18:10:00.871385"], ["quantity", 2]]
+  [1m[36mProduct Update All (0.1ms)[0m  [1m[33mUPDATE "products" SET "quantity" = COALESCE("quantity", 0) - ? WHERE "products"."id" = ?[0m  [["quantity", 2], ["id", 980190962]]
+  [1m[36mPlacement Create (0.1ms)[0m  [1m[32mINSERT INTO "placements" ("order_id", "product_id", "created_at", "updated_at", "quantity") VALUES (?, ?, ?, ?, ?)[0m  [["order_id", 980190963], ["product_id", 298486374], ["created_at", "2022-06-18 18:10:00.872377"], ["updated_at", "2022-06-18 18:10:00.872377"], ["quantity", 3]]
+  [1m[36mProduct Update All (0.1ms)[0m  [1m[33mUPDATE "products" SET "quantity" = COALESCE("quantity", 0) - ? WHERE "products"."id" = ?[0m  [["quantity", 3], ["id", 298486374]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendering order_mailer/send_confirmation.html.erb within layouts/mailer
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?[0m  [["order_id", 980190963]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?[0m  [["order_id", 980190963]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------------
+Api::V1::OrdersControllerTest: test_should_forbid_create_order_for_unlogged
+---------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+Api::V1::OrdersControllerTest: test_should_show_orders
+------------------------------------------------------
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 298486374], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+Started POST "/api/v1/orders" for 127.0.0.1 at 2022-06-18 14:10:00 -0400
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by Api::V1::OrdersController#create as JSON
+  Parameters: {"order"=>{"product_ids_and_quantities"=>[{"product_id"=>980190962, "quantity"=>2}, {"product_id"=>298486374, "quantity"=>3}]}}
+Filter chain halted as :check_login rendered or redirected
+Completed 403 Forbidden in 0ms (ActiveRecord: 0.0ms | Allocations: 141)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 298486374], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------
+Api::V1::OrdersControllerTest: test_should_create_order_with_two_products
+-------------------------------------------------------------------------
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 298486374], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+Started GET "/api/v1/orders" for 127.0.0.1 at 2022-06-18 14:10:00 -0400
+Started POST "/api/v1/orders" for 127.0.0.1 at 2022-06-18 14:10:00 -0400
+Processing by Api::V1::OrdersController#create as JSON
+  Parameters: {"order"=>{"product_ids_and_quantities"=>[{"product_id"=>980190962, "quantity"=>2}, {"product_id"=>298486374, "quantity"=>3}]}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 292ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 346959)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Processing by Api::V1::OrdersController#index as JSON
+  Parameters: {"order"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendered order_mailer/send_confirmation.html.erb within layouts/mailer (Duration: 281.0ms | Allocations: 348859)
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------
+Api::V1::OrdersControllerTest: test_should_show_order
+-----------------------------------------------------
+  [1m[36mOrder Create (0.4ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 980190962], ["total", 0.0], ["created_at", "2022-06-18 18:10:01.017270"], ["updated_at", "2022-06-18 18:10:01.017270"]]
+  Rendering order_mailer/send_confirmation.text.erb within layouts/mailer
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?[0m  [["order_id", 980190962]]
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 980190962]]
+  Rendered order_mailer/send_confirmation.text.erb within layouts/mailer (Duration: 1.0ms | Allocations: 541)
+OrderMailer#send_confirmation: processed outbound mail in 292.7ms
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?[0m  [["order_id", 980190962]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "products"."id" FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?[0m  [["order_id", 980190962]]
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 5149)
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("products"."price") FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?[0m  [["order_id", 980190963]]
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 298486374], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 980190962]]
+  [1m[36mPlacement Create (0.2ms)[0m  [1m[32mINSERT INTO "placements" ("order_id", "product_id", "created_at", "updated_at", "quantity") VALUES (?, ?, ?, ?, ?)[0m  [["order_id", 980190963], ["product_id", 980190962], ["created_at", "2022-06-18 18:10:01.027884"], ["updated_at", "2022-06-18 18:10:01.027884"], ["quantity", 2]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mProduct Update All (0.1ms)[0m  [1m[33mUPDATE "products" SET "quantity" = COALESCE("quantity", 0) - ? WHERE "products"."id" = ?[0m  [["quantity", 2], ["id", 980190962]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 298486374], ["LIMIT", 1]]
+  [1m[36mPlacement Create (0.1ms)[0m  [1m[32mINSERT INTO "placements" ("order_id", "product_id", "created_at", "updated_at", "quantity") VALUES (?, ?, ?, ?, ?)[0m  [["order_id", 980190963], ["product_id", 298486374], ["created_at", "2022-06-18 18:10:01.029165"], ["updated_at", "2022-06-18 18:10:01.029165"], ["quantity", 3]]
+  [1m[36mProduct Update All (0.1ms)[0m  [1m[33mUPDATE "products" SET "quantity" = COALESCE("quantity", 0) - ? WHERE "products"."id" = ?[0m  [["quantity", 3], ["id", 298486374]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+----------------------------------------------------------------
+AuthenticableTest: test_should_get_user_from_Authorization_token
+----------------------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/api/v1/orders/980190962" for 127.0.0.1 at 2022-06-18 14:10:01 -0400
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------
+AuthenticableTest: test_should_not_get_user_from_empty_Authorization_token
+--------------------------------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering order_mailer/send_confirmation.html.erb within layouts/mailer
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?[0m  [["order_id", 980190963]]
+Processing by Api::V1::OrdersController#show as JSON
+  Parameters: {"id"=>"980190962", "order"=>{}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?[0m  [["order_id", 980190963]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendered order_mailer/send_confirmation.html.erb within layouts/mailer (Duration: 4.7ms | Allocations: 2305)
+  Rendering order_mailer/send_confirmation.text.erb within layouts/mailer
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?[0m  [["order_id", 980190963]]
+  Rendered order_mailer/send_confirmation.text.erb within layouts/mailer (Duration: 0.9ms | Allocations: 650)
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ? AND "orders"."id" = ? LIMIT ?[0m  [["user_id", 980190962], ["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "products"."id" FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?[0m  [["order_id", 980190962]]
+OrderMailer#send_confirmation: processed outbound mail in 19.0ms
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?[0m  [["order_id", 980190962]]
+Completed 200 OK in 13ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 5724)
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ? ORDER BY "products"."id" ASC LIMIT ?[0m  [["order_id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Delivered mail 62ae14f9e70c_152f9d886759@Stans-MBP.lan.mail (8.9ms)
+Date: Sat, 18 Jun 2022 14:10:01 -0400
+From: no-reply@marketplace.com
+To: one@one.org
+Message-ID: <62ae14f9e70c_152f9d886759@Stans-MBP.lan.mail>
+Subject: Order Confirmation
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_62ae14f9cecb_152f9d886687";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_62ae14f9cecb_152f9d886687
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Order: #980190963
+You ordered 2 products:
+    TV Plosmo Philopps - $9,999.99
+    Azos Zeenbok - $499.99
+
+
+----==_mimepart_62ae14f9cecb_152f9d886687
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Order: #980190963</h1>
+<p>You ordered 2 products:</p>
+<ul>
+    <li>TV Plosmo Philopps - $9,999.99</li>
+    <li>Azos Zeenbok - $499.99</li>
+</ul>
+  </body>
+</html>
+
+----==_mimepart_62ae14f9cecb_152f9d886687--
+
+Completed 201 Created in 57ms (Views: 0.3ms | ActiveRecord: 1.6ms | Allocations: 22183)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  [1m[35m (2.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 200 OK in 245ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 586)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 401 Unauthorized in 251ms (ActiveRecord: 0.1ms | Allocations: 459)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendered order_mailer/send_confirmation.html.erb within layouts/mailer (Duration: 257.3ms | Allocations: 347773)
+  Rendering order_mailer/send_confirmation.text.erb within layouts/mailer
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" INNER JOIN "placements" ON "products"."id" = "placements"."product_id" WHERE "placements"."order_id" = ?[0m  [["order_id", 980190963]]
+  Rendered order_mailer/send_confirmation.text.erb within layouts/mailer (Duration: 1.0ms | Allocations: 651)
+OrderMailer#send_confirmation: processed outbound mail in 267.3ms
+Delivered mail 62ae14f923c73_15339d8867c8@Stans-MBP.lan.mail (4.8ms)
+Date: Sat, 18 Jun 2022 14:10:01 -0400
+From: no-reply@marketplace.com
+To: one@one.org
+Message-ID: <62ae14f923c73_15339d8867c8@Stans-MBP.lan.mail>
+Subject: Order Confirmation
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_62ae14f9231f3_15339d8866e4";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_62ae14f9231f3_15339d8866e4
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Order: #980190963
+You ordered 2 products:
+    TV Plosmo Philopps - $9,999.99
+    Azos Zeenbok - $499.99
+
+
+----==_mimepart_62ae14f9231f3_15339d8866e4
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Order: #980190963</h1>
+<p>You ordered 2 products:</p>
+<ul>
+    <li>TV Plosmo Philopps - $9,999.99</li>
+    <li>Azos Zeenbok - $499.99</li>
+</ul>
+  </body>
+</html>
+
+----==_mimepart_62ae14f9231f3_15339d8866e4--
+
+Completed 201 Created in 286ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 361113)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "placements"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
