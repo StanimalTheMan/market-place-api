@@ -51,3 +51,5 @@ gem "jsonapi-serializer", "~> 2.2"
 gem "rack-cors", "~> 1.1"
 
 gem "kaminari", "~> 1.2"
+
+gem "bullet", "~> 7.0", :group => :development
